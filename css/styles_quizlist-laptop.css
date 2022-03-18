@@ -1,0 +1,12 @@
+@media screen and (max-width: 1600px) and (min-width: 1000px){
+    
+    .quiz-title h3 {
+        font-family: 'Titillium Web', sans-serif;
+        font-size: 130%;
+    }
+    
+    .quiz-info {
+        font-size: 110%;
+        text-align: justify;
+    }
+}

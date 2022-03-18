@@ -1,0 +1,159 @@
+
+.icon {
+    display: inline-block;
+    margin: 2%;
+    width: 35px;
+    height: 35px;
+}
+
+#menu-icon{
+    width: 5%;
+    height: 5%;
+}
+
+input[type=text], input[type=password], input[type=email]{
+    width: 100%;
+    padding: 1vh;
+    display: inline-block;
+    border: 1px solid #ccc;
+    margin-bottom: 1.6%;
+}
+
+label {
+    display: block;
+    font-size: 110%;
+    font-weight: bolder;
+    margin-bottom: 0.5vh;
+}
+
+#rememberme {
+    font-size: 110%;
+    font-weight: normal;
+}
+
+button {
+    background-color: rgb(27, 27, 27);
+    filter: drop-shadow(5px 5px 5px #222);
+    border-radius: 15px;
+    font-size: 100%;
+    color: white;
+    font-weight: 600;
+    padding: 2%;
+    border: none;
+    cursor: pointer;
+}
+
+button.submit{
+    filter: none;
+    margin: 2% auto;
+    width: 100%;
+    padding: 2.2%;
+}
+
+    button:hover{
+        scale: 1.5;
+        background-color: rgb(243, 204, 74);
+        color: #000;
+        transition: all 0.2s ease-out;
+    }
+
+.container {
+    padding: 3%;
+}
+
+.more-login {
+    border-top: #ccc solid 1px;
+    display: block;
+    padding: 2.5%;
+    margin-top: 4%;
+}
+
+button.createacc {
+    position: relative;
+    left: -2%;
+    filter: none;
+    padding: 2.5%;
+}
+
+button.createacc a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #fefefe;
+}
+
+span.pw{
+    float: right;
+    font-size: 100%;
+    padding-top: 2%;
+}
+
+.pfp {
+    text-align: center;
+}
+
+#avatar{
+    width: 45%;
+    border-radius: 50%;
+    margin-bottom: 2vh;
+}
+
+.focus {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+    .focus .container {
+        background-color: #fefefe;
+        margin: 2% auto;
+        border: 1px solid #888;
+        width: 60%;
+        padding-bottom: 1%;
+    }
+
+.exitbtn {
+    background:#fefefe;
+    width: auto;
+    padding: 0.5%;
+    position: absolute;
+    right: 21%;
+    top: 7vh;
+    transition: all 0.3s ease;
+}
+
+.exitbtn{
+    filter: none;
+}
+
+.exitbtn img{
+    opacity: 0.5;
+}
+    .exitbtn:hover, .exitbtn:focus{
+    filter: brightness(1) contrast(1) invert(1) ;
+    background: rgba(105, 227, 238, 0.85);
+    mix-blend-mode: hard-light ;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    }
+
+.zoom {
+    animation: zoomout 0.6s;
+    animation: zoomin 0.6s;
+}
+
+    @keyframes zoomin{
+        from{transform: scale(0);}
+        to {transform: scale(1);}
+    }
+
+    @keyframes zoomout{
+        from{transform: scale(1);}
+        to{transform: scale(0);}
+    }

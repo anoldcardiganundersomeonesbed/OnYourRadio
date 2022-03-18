@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <!-- general styles -->
+       <link rel="stylesheet" href="../css/login_Styles.css">
+       <link rel="stylesheet" href="../css/styles_general.css">
+    
+       <link media="(max-width: 640px)" rel="stylesheet" href="../css/login_Styles-small.css">
+       <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/login_Styles-med.css">
+       <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/login_Styles-laptop.css">
+      <link media="(min-width: 1600px)" rel="stylesheet" href="../css/login_Styles.css">
+    
+       <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_general-small.css">
+       <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_general-med.css">
+       <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_general-laptop.css">
+       <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_general.css">
+
+    <!-- this page styles -->
+    <link rel="stylesheet" href="../css/styles_library.css">
+
+    <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_library-small.css">
+    <link media="(min-width: 640px) and (max-width: 1024px)" rel="stylesheet" href="../css/styles_library-med.css">
+    <link media="(min-width: 1024px)" rel="stylesheet" href="../css/styles_library.css">
+
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/d11c29c02b.js" crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="../img/WEBLOGO2.0.png" type="image/png">
+
+    <title>On Your Radio</title>
+    
+<body>
+
+  <header id="header">
+    <figure id="logo">
+      <img src="../img/WEBLOGO2.0.png" alt="logo">
+    </figure>
+    <div id="web-title">
+      <h2>On Your Radio</h2>
+    </div>
+      
+      <ul id="navright">
+        <li class="search-bar"><img id="search-icon" class="icon" src="../img/search.png" alt="search-icon"><input type="text" placeholder="Buscar..."></div>
+      <li class="login"><button onclick="document.getElementById('login-page').style.display='block'"><img class="hide-icon white" src="../img/profile-White.png" alt="log-in"><img class="hide-icon black" src="../img/profile.png" alt="log-in"><h3>Iniciar Sesión</h3></button></div>
+      </ul>
+      
+      <div id="login-page" class="focus">
+        <form action="php" method="post" class="zoom">
+      <div class="container">
+        <figure class="pfp"><img id="avatar" src="../img/avatar.png" alt=""></figure>
+        <label for="username">Usuario:</label>
+        <input type="text" placeholder="Inserte su nombre de usuario..." name="username" required>
+
+        <label for="pw">Contraseña:</label>
+        <input type="password" placeholder="Escriba su contraseña..." name="pw" required>
+
+        <button class="submit" type="submit">Iniciar sesión</button>
+        <label id="rememberme" for="rememberme">
+          <input type="checkbox" checked="checked" name="rememberme">Recordarme
+        </label>
+        <button type="button" class="exitbtn" onclick="document.getElementById('login-page').style.display='none'"><img class="icon" src="../img/cross.png" alt="exit"></button>
+        <div class="more-login">
+          <button type="button" class="createacc"><a href="createAcc.html">Registrarme</a></button>
+          <span class="pw"><a href="#">Olvidé mi contraseña</a></span>
+        </div>
+        </div>
+        </form>
+      </div>
+      
+  </header>
+
+<input type="checkbox" id="hmgmenu" name="hmgmenu">
+<label for="hmgmenu"><img id="imgmenu" class="hide-icon" src="../img/menu-icon.png" alt="menu">
+</label>
+
+<nav id="menu" class="nav">
+      <ul id="menops">
+          <li id="op-searchbar" class="search-bar nav-hide option">
+            <img id="hmg-search-icon" class="icon nav-hide" src="../img/search.png" alt="search-icon">
+            <input id="hmg-search" type="text" placeholder="Buscar...">
+          
+          <li id="home" class="option">
+              <a href="../index.html"><img class="hide-icon" src="../img/home-icon.png" alt="home"><h3>Inicio</h3></a>
+          </li>
+          <li id="quiz-link" class="option">
+              <a href="quizes_list.html"><img class="hide-icon" src="../img/quiz-icons.png" alt="quizzes"><h3>Quizzes</h3></a>
+          </li>
+          <li id="playlistLink" class="option">
+              <a href="playlist.html"><img class="hide-icon" src="../img/playlist.png" alt="playlist"><h3>Playlist Semanal</h3></a>
+          </li>
+          <li id="libraryLink" class="option">
+            <a href="ourLibrary.html"><img class="hide-icon" src="../img/library.png" alt="library"><h3>Librería</h3></a>
+        </li>
+        </ul>
+</nav>
+
+    <main>
+        <div id="search-screen" class="main-page">
+            <label for="search"><h2>¿Buscando algo en particular?</h2></label>
+            <img class="icon" src="../img/search.png" alt="search-icon">
+            <input type="text" placeholder="Buscar por género, artista, nombre del álbum o década...">
+            
+            <ul id="show-albums-by">
+                <li id="genres_btn" class="genre show-by-btn">
+                  <button type="button" onclick="document.getElementById('allGenres').style.display='block'">
+                    <h3>Buscar por género</h3>
+                    <img class="show-by-img" src="../img/generos.jpg" alt="buscar por género">
+                  </button>
+                </li>
+
+                <li id="decades_btn" class="decade show-by-btn">
+                  <button type="button" onclick="document.getElementById('decades').style.display='block'">
+                    <h3>Buscar por década</h3>
+                    <img class="show-by-img" src="../img/decadas.jpg" alt="buscar por década">
+                  </button>
+                </li>
+
+                <li id="all_btn" class="all-albums show-by-btn">
+                  <button type="button">
+                    <h3>Mostrar todo</h3>
+                    <img class="show-by-img" src="../img/all.jpg" alt="mostrar todo">
+                  </button>
+                </li>
+            </ul>
+        </div>
+        <div id="allGenres" class="sub-page">
+          <button type="button" class="exitbtn" onclick="document.getElementById('allGenres').style.display='none'"><img class="icon" src="../img/cross.png" alt="exit"></button>
+          <div class="sub-page-container zoom">
+            <div class="sub-page-title"><h2>MOSTRAR ÁLBUMES POR GÉNERO</h2></div>
+        
+          <ul id="by-genre">
+          
+            <li id="pop" class="genre show-by-btn">
+              <button type="button">
+                <h3>POP</h3>
+                <img  class="show-by-img" src="../img/pop.jpg" alt="pop">
+              </button>
+            </li>
+
+            <li id="rock" class="genre show-by-btn">
+              <button type="button">
+                <h3>ROCK</h3>
+                <img  class="show-by-img" src="../img/rock.jpg" alt="rock">
+              </button>
+            </li>
+
+            <li id="jazz" class="genre show-by-btn">
+              <button type="button">
+                <h3>JAZZ</h3>
+                <img  class="show-by-img" src="../img/jazzB.jpg" alt="jazz">
+              </button>
+            </li>
+            <li id="R&B" class="genre show-by-btn">
+              <button type="button">
+                <h3>R&B</h3>
+                <img  class="show-by-img" src="../img/rnb.jpg" alt="r&b">
+              </button>
+            </li>
+
+            <li id="electronic" class="genre show-by-btn">
+                <button type="button">
+                    <h3>ELECTRONIC</h3>
+                    <img class="show-by-img" src="../img/electronic.jpg" alt="electronic">
+                </button>
+            </li>
+
+            <li id="hip-hop" class="genre show-by-btn">
+              <button type="button">
+                <h3>HIP-HOP</h3>
+                <img class="show-by-img" src="../img/hip-hop.jpg" alt="hip-hop">
+              </button>
+            </li>
+
+          </ul>
+          </div>
+        </div>
+
+        <div id="decades" class="sub-page">
+          <button type="button" class="exitbtn" onclick="document.getElementById('decades').style.display='none'"><img class="icon" src="../img/cross.png" alt="exit"></button>
+         <div class="sub-page-container zoom">
+          <div class="sub-page-title"><h2>MOSTRAR ÁLBUMES POR DÉCADA</h2></div>
+          <ul id="by-decade">
+              <li id="70s" class="decade show-by-btn">
+                <button type="button">
+                  <h3>70s</h3>
+                  <img class="show-by-img" src="../img/70s.jpg" alt="70s">
+                </button>
+              </li>
+  
+              <li id="80s" class="decade show-by-btn">
+                <button type="button">
+                  <h3>80s</h3>
+                  <img class="show-by-img" src="../img/80s.jpg" alt="80s">
+                </button>
+              </li>
+  
+              <li id="90s" class="decade show-by-btn">
+                <button type="button">
+                  <h3>90s</h3>
+                  <img class="show-by-img" src="../img/90s.jpg" alt="90s">
+                </button>
+              </li>
+  
+              <li id="2000s" class="decade show-by-btn">
+                <button type="button">
+                  <h3>2000s</h3>
+                  <img class="show-by-img" src="../img/2000s.jpg" alt="2000s">
+                </button>
+              </li>
+  
+              <li id="2010s" class="decade show-by-btn">
+                <button type="button">
+                  <h3>2010s</h3>
+                  <img class="show-by-img" src="../img/2010s.jpg" alt="2010s">
+                </button>
+              </li>
+  
+              <li id="new-releases" class="show-by-btn decade">
+                <button type="button">
+                  <h3>Actual</h3>
+                  <img class="show-by-img" src="../img/actual.jpg" alt="actual">
+                </button>
+              </li>
+  
+            </ul>
+         </div>
+        </div>
+    </main>
+
+    <footer>
+      <div id="social-media">
+        <h4>Follow us on our social media!</h4>
+        <ul class="social-media-list">
+          <li class="twt"><i class="fa-brands fa-twitter"></i></li>
+          <li class="ig"><i class="fa-brands fa-instagram"></i></li>
+          <li class="fb"><i class="fa-brands fa-facebook"></i></li>
+          <li class="sp"><i class="fa-brands fa-spotify"></i></li>
+        </ul>
+      </div>
+      <div id="phrase"><h2>Always on Your Radio</h2></div>
+      <div id="copyright">All rights reserved</div>
+    </footer>
+
+    </body>
+</html>

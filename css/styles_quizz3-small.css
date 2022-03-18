@@ -1,0 +1,10 @@
+@media screen and (max-width:640px){
+    main{
+        max-height: 200vh;
+    }
+
+    .quiz_box{
+        max-height: 200vh;
+        padding-top: 3vh;
+    }
+}

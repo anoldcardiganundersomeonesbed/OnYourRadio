@@ -1,0 +1,145 @@
+body{
+    background-color: #222;
+}
+
+main {
+    width: 70%;
+    margin: 3vh auto;
+}
+
+.form-page{
+    background-color: white;
+    padding: 5%;
+    padding-bottom: 0%;
+    border-radius: 25px;
+    border: solid 1px rgb(155, 155, 155);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 55% 45%;
+    grid-template-rows: 20vh auto 12vh 10vh;
+    grid-template-areas: 
+    " formheader formheader "
+    " formmain figure "
+    "submit . "
+    " formfoot formfoot ";
+}
+
+.form-header {
+    grid-area: formheader;
+    width: 100%;
+}
+
+.form-header h2 {
+    font-size: 250%;
+    transform: translateY(-3vh);
+}
+
+.form-header figure img {
+    display: block;
+    width: 15%;
+}
+
+.form-image {
+    grid-area: figure;
+    width: 100%;
+    max-height: 60vh;
+    padding: 10%;
+    padding-right: 0;
+    
+}
+
+.form-image img{
+    display: block;
+    width: 100%;
+    margin-bottom: 2vh;
+    filter:drop-shadow(2px 2px 4px rgba(34, 34, 34, 0.513))
+    hue-rotate(9deg) brightness(1.7);
+}
+.form-image p {
+    display: block;
+    width: 80%;
+    margin: auto;
+    max-height: 5vh;
+    text-align: center;
+    padding: 1vh 0vh;
+}
+
+.singup{
+    grid-area: submit;
+    height: 10vh;
+    border-radius: 5px;
+    width: 90%;
+    margin: 0 auto;
+    filter: none;
+}
+
+
+.formfoot{
+    border-top: 1px solid rgb(177, 177, 177);
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    grid-area: formfoot;
+    padding: 0%;
+}
+
+.formfoot ul {
+    list-style: none;
+}
+
+.moreform{
+    float: right;
+    width:20%;
+    min-height: 10vh;
+}
+
+.moreform a{
+    text-decoration: none;
+    color: rgb(177, 177, 177);
+    display: block;
+    text-align: right;
+    text-transform: uppercase;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    padding: 3vh;
+    font-size: 70%;
+    transition: all 0.3s ease;
+}
+
+.moreform a:hover{
+    transform: scale(1.1) translateX(-1%);
+    text-shadow: rgba(34, 34, 34, 0.493) 1px 1px 1px;
+    transition: all 0.3s ease;
+}
+
+#createAcc {
+    grid-area: formmain;
+    width: 100%;
+}
+
+.formcheck{
+    margin: 3vh auto;
+}
+
+.formcheck input{
+    cursor: pointer;
+   margin-right: 2%;
+}
+
+.formcheck label{
+    cursor: pointer;
+    display: inline-block;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 90%;
+    font-weight: 500;
+}
+.nameholder, .stnameholder {
+    display: inline-block;
+    width: 45%;
+}
+
+.stnameholder {
+    float: right;
+}

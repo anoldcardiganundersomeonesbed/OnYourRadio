@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- general styles -->
+      <link rel="stylesheet" href="../css/login_Styles.css">
+      <link rel="stylesheet" href="../css/styles_general.css">
+   
+      <link media="(max-width: 640px)" rel="stylesheet" href="../css/login_Styles-small.css">
+      <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/login_Styles-med.css">
+      <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/login_Styles-laptop.css">
+      <link media="(min-width: 1600px)" rel="stylesheet" href="../css/login_Styles.css">
+   
+      <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_general-small.css">
+   <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_general-med.css">
+   <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_general-laptop.css">
+   <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_general.css">
+
+    <!-- this page styles -->
+    <link rel="stylesheet" href="../css/styles_all-Albums.css">
+
+    <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_all-Albums-small.css">
+    <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_all-Albums-med.css">
+    <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_all-Albums-laptop.css">
+    <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_all-Albums.css">
+    
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/d11c29c02b.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="../img/WEBLOGO2.0.png" type="../image/png">
+
+
+    <title>On Your Radio</title>
+    
+<body>
+
+    <header id="header">
+        <figure id="mainlogo">
+          <img src="../img/logopage.png" alt="logo">
+        </figure>
+        <figure id="logo">
+          <img src="../img/WEBLOGO2.0.png" alt="logo">
+        </figure>
+          <div id="login-page" class="focus">
+            <form action="php" method="post" class="zoom">
+          <div class="container">
+            <figure class="pfp"><img id="avatar" src="../img/avatar.png" alt="user"></figure>
+            <label for="username">Usuario:</label>
+            <input type="text" placeholder="Inserte su nombre de usuario..." name="username" required>
+    
+            <label for="pw">Contraseña:</label>
+            <input type="password" placeholder="Escriba su contraseña..." name="pw" required>
+    
+            <button class="submit" type="submit">Iniciar sesión</button>
+            <label id="rememberme" for="rememberme">
+              <input type="checkbox" checked="checked" name="rememberme">Recordarme
+            </label>
+            <button type="button" class="exitbtn" onclick="document.getElementById('login-page').style.display='none'"><img class="icon" src="../img/cross.png" alt="exit"></button>
+            <div class="more-login">
+              <button type="button" class="createacc"><a href="createAcc.html">Registrarme</a></button>
+              <span class="pw"><a href="#">Olvidé mi contraseña</a></span>
+            </div>
+            </div>
+            </form>
+          </div>
+          
+      </header>
+    
+    <input type="checkbox" id="hmgmenu" name="hmgmenu">
+    <label for="hmgmenu"><img id="imgmenu" class="hide-icon" src="../img/menu-icon.png" alt="menu">
+    </label>
+    
+    <nav id="menu" class="nav">
+      <ul id="menops">
+        <li id="op-searchbar" class="search-bar nav-hide option hbgop">
+          <img class="icon nav-hide" src="../img/search.png" alt="search-icon">
+          <input type="text" placeholder="Buscar...">
+        </li>
+          <li id="home" class="option hbgop">
+              <a href="../index.html"><img class="hide-icon" src="../img/home-icon.png" alt="home"><h3>Inicio</h3></a>
+          </li>
+          <li id="quiz-link" class="option hbgop">
+              <a href="quizes_list.html"><img class="hide-icon" src="../img/quiz-icons.png" alt="quizzes"><h3>Quizzes</h3></a>
+          </li>
+          <li id="playlistLink" class="option hbgop">
+              <a href="playlist.html"><img class="hide-icon" src="../img/playlist.png" alt="playlist"><h3>Playlist Semanal</h3></a>
+          </li>
+          <li id="libraryLink" class="option hbgop">
+            <a href="allAlbums.html"><img class="hide-icon" src="../img/library.png" alt="library"><h3>Librería</h3></a>
+        </li>
+        <li id="nav-searchbar" class="search-bar option smallhide">
+          <img class="search-icon" class="icon" src="../img/search.png" alt="search-icon">
+          <input type="text" placeholder="Buscar...">
+        </li>
+        
+        </ul>
+    </nav>
+    <div class="login">
+      <button onclick="document.getElementById('login-page').style.display='block'">
+        <img class="hide-icon white" src="../img/profile-White.png" alt="log-in">
+        <img class="hide-icon black" src="../img/profile.png" alt="log-in">
+        <h3>Iniciar Sesión</h3>
+      </button>
+    </div>
+    <main>
+        <section id="A-Kind-Of-Magic" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>A Kind Of Magic – Queen</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 1986</p></div>
+                <div class="genre"><p>Género: Rock</p></div>
+            </section>
+            <input type="checkbox" id="akindofmagicmenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section>
+            <section class="tracklist" id="akindofmag">
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track">
+                        <li class="ntrack">1. </li>
+                        <li class="song single">One Vision </li>
+                        <li><i id="now-playing-OneVision" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:11</li>
+                    </ul>
+                    <ul class="track" onmouseover="AKindOfMagic.play()" onmouseleave="AKindOfMagic.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song single">A Kind Of Magic</li>
+                        <li><i id="now-playing-AKindOfMagic" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:25</li>
+                    </ul>
+                    <ul class="track" onmouseover="OneYearOfLove.play()" onmouseleave="OneYearOfLove.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song single">One Year Of Love</li>
+                        <li><i id="now-playing-OneYearOfLove" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:27</li>
+                    </ul>
+                    <ul class="track" onmouseover="PainIsSoCloseToPleasure.play()" onmouseleave="PainIsSoCloseToPleasure.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song single">Pain Is So Close To Pleasure</li>
+                        <li><i id="now-playing-PainIsSoCloseToPleasure" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:22</li>
+                    </ul>
+                    <ul class="track" onmouseover="FriendsWillBeFriends.play()" onmouseleave="FriendsWillBeFriends.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song single">Friends Will Be Friends</li>
+                        <li><i id="now-playing-FriendsWillBeFriends" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:08</li>
+                    </ul>
+                    <ul class="track" onmouseover="WhoWantsToLiveForever.play()" onmouseleave="WhoWantsToLiveForever.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song single">Who Wants To Live Forever</li>
+                        <li><i id="now-playing-WhoWantsToLiveForever" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:17</li>
+                    </ul>
+                    <ul class="track" onmouseover="GimmeThePrize.play()" onmouseleave="GimmeThePrize.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">Gimme The Prize (Kurgan's Theme)</li>
+                        <li><i id="now-playing-GimmeThePrize" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:35</li>
+                    </ul>
+                    <ul class="track" onmouseover="DontLoseYourHead.play()" onmouseleave="DontLoseYourHead.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">Don't Lose Your Head</li>
+                        <li><i id="now-playing-DontLoseYourHead" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:38</li>
+                    </ul>
+                    <ul class="track" onmouseover="PrincesOfTheUniverse.play()" onmouseleave="PrincesOfTheUniverse.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song single">Princes Of The Universe</li>
+                        <li><i id="now-playing-PrincesOfTheUniverse" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:33</li>
+                    </ul>
+                    <ul class="track" onmouseover="AKindOfAKindOfMagic.play()" onmouseleave="AKindOfAKindOfMagic.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">A Kind Of 'A Kind Of Magic'</li>
+                        <li><i id="now-playing-AKindOfAKindOfMagic" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:38</li>
+                    </ul>
+                    <ul class="track" onmouseover="FriendsWillBeFriendsWillBeFriends.play()" onmouseleave="FriendsWillBeFriendsWillBeFriends.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song">Friends Will Be Friends Will Be Friends...</li>
+                        <li><i id="now-playing-FriendsWillBeFriendsWillBeFriends" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:58</li>
+                    </ul>
+                    <ul class="track" onmouseover="Forever.play()" onmouseleave="Forever.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">Forever</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:21</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+                
+            </section>
+        </section>
+        <section id="LM5" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>LM5 – Little Mix</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 2018</p></div>
+                <div class="genre"><p>Género: Funk/Soul, Pop</p></div>
+            </section> 
+            <input type="checkbox" id="lm5menu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section> 
+            <section class="tracklist" id="lm5tracklist">
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="TheNationalAnthem.play()" onmouseleave="TheNationalAnthem.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song">The National Anthem</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">0:29</li>
+                    </ul>
+                    <ul class="track" onmouseover="WomanLikeMe.play()" onmouseleave="WomanLikeMe.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song single">Woman Like Me</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:49</li>
+                    </ul>
+                    <ul class="track" onmouseover="ThinkAboutUs.play()" onmouseleave="ThinkAboutUs.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song single">Think About Us</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:55</li>
+                    </ul>
+                    <ul class="track" onmouseover="Strip.play()" onmouseleave="Strip.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song">Strip</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:19</li>
+                    </ul>
+                    <ul class="track" onmouseover="MonsterInMe.play()" onmouseleave="MonsterInMe.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song">Monster In Me</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:45</li>
+                    </ul>
+                    <ul class="track" onmouseover="JoanOfArc.play()" onmouseleave="JoanOfArc.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song">Joan Of Arc</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:11</li>
+                    </ul>
+                    <ul class="track" onmouseover="LoveAGirlRight.play()" onmouseleave="LoveAGirlRight.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">Love A Girl Right</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:02</li>
+                    </ul>
+                    <ul class="track" onmouseover="AmericanBoy.play()" onmouseleave="AmericanBoy.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">American Boy</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:11</li>
+                    </ul>
+                    <ul class="track" onmouseover="ToldYouSo.play()" onmouseleave="ToldYouSo.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song">Told You So</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:12</li>
+                    </ul>
+                    <ul class="track" onmouseover="Wasabi.play()" onmouseleave="Wasabi.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Wasabi</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:34</li>
+                    </ul>
+                    <ul class="track" onmouseover="MoreThanWords.play()" onmouseleave="MoreThanWords.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song">More Than Words</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:18</li>
+                    </ul>
+                    <ul class="track" onmouseover="Motivate.play()" onmouseleave="Motivate.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">Motivate</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:21</li>
+                    </ul>
+                    <ul class="track" onmouseover="Notice.play()" onmouseleave="Notice.pause()">
+                        <li class="ntrack">13. </li>
+                        <li class="song">Notice</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:34</li>
+                    </ul>
+                    <ul class="track" onmouseover="TheCure.play()" onmouseleave="TheCure.pause()">
+                        <li class="ntrack">14. </li>
+                        <li class="song">The Cure</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:35</li>
+                    </ul>
+                    <ul class="track" onmouseover="ForgetYouNot.play()" onmouseleave="ForgetYouNot.pause()">
+                        <li class="ntrack">15. </li>
+                        <li class="song">Forget You Not</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:07</li>
+                    </ul>
+                    <ul class="track" onmouseover="WomansWorld.play()" onmouseleave="WomansWorld.pause()">
+                        <li class="ntrack">16. </li>
+                        <li class="song">Woman's World</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:37</li>
+                    </ul>
+                    <ul class="track" onmouseover="TheCureStripped.play()" onmouseleave="TheCureStripped.pause()">
+                        <li class="ntrack">17. </li>
+                        <li class="song">The Cure (Stripped)</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">1:47</li>
+                    </ul>
+                    <ul class="track" onmouseover="OnlyYouft.CheatCodes.play()" onmouseleave="OnlyYouft.CheatCodes.pause()">
+                        <li class="ntrack">18. </li>
+                        <li class="song">Only You (ft. Cheat Codes)</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:09</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+            </section>
+
+        </section>
+        <section id="Ziggy-Stardust" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>The Rise And Fall Of Ziggy Stardust And The Spiders From Mars – David Bowie</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 	1972</p></div>
+                <div class="genre"><p>Género: Rock</p></div>
+            </section>
+            <input type="checkbox" id="ziggymenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section>
+            <section class="tracklist" id="ziggytracklist">
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="FiveYears.play()" onmouseleave="FiveYears.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song">Five Years</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:42</li>
+                    </ul>
+                    <ul class="track" onmouseover="SoulLove.play()" onmouseleave="SoulLove.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song">Soul Love</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:34</li>
+                    </ul>
+                    <ul class="track" onmouseover="MoonageDaydream.play()" onmouseleave="MoonageDaydream.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song">Moonage Daydream</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:40</li>
+                    </ul>
+                    <ul class="track" onmouseover="Starman.play()" onmouseleave="Starman.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song single">Starman</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:10</li>
+                    </ul>
+                    <ul class="track" onmouseover="ItAintEasy.play()" onmouseleave="ItAintEasy.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song">It Ain't Easy</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:58</li>
+                    </ul>
+                    <ul class="track" onmouseover="LadyStardust.play()" onmouseleave="LadyStardust.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song">Lady Stardust</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:22</li>
+                    </ul>
+                    <ul class="track" onmouseover="Star.play()" onmouseleave="Star.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">Star</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:47</li>
+                    </ul>
+                    <ul class="track" onmouseover="HangOnToYourself.play()" onmouseleave="HangOnToYourself.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">Hang On To Yourself</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:40</li>
+                    </ul>
+                    <ul class="track" onmouseover="ZiggyStardust.play()" onmouseleave="ZiggyStardust.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song">Ziggy Stardust</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:13</li>
+                    </ul>
+                    <ul class="track" onmouseover="SuffragetteCity.play()" onmouseleave="SuffragetteCity.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Suffragette City</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:25</li>
+                    </ul>
+                    <ul class="track" onmouseover="RockNRollSuicide.play()" onmouseleave="RockNRollSuicide.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song single">Rock 'N' Roll Suicide</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:58</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+            </section>
+        </section>
+
+        <section id="Folklore" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>Folklore – Taylor Swift</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 2020</p></div>
+                <div class="genre"><p>Género: Rock, Pop, Folk, World, & Country</p></div>
+            </section>
+            <input type="checkbox" id="folkloremenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section> 
+            <section class="tracklist" id="folkloretracklist">
+            
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="The1.play()" onmouseleave="The1.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song">The 1</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:42</li>
+                    </ul>
+                    <ul class="track" onmouseover="Cardigan.play()" onmouseleave="Cardigan.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song single">Cardigan</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:11</li>
+                    </ul>
+                    <ul class="track" onmouseover="TheLastGreatAmericanDynasty.play()" onmouseleave="TheLastGreatAmericanDynasty.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song">The Last Great American Dynasty</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:03</li>
+                    </ul>
+                    <ul class="track" onmouseover="Exile.play()" onmouseleave="Exile.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song single">Exile</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:57</li>
+                    </ul>
+                    <ul class="track" onmouseover="MyTearsRicochet.play()" onmouseleave="MyTearsRicochet.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song">My Tears Ricochet</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:28</li>
+                    </ul>
+                    <ul class="track" onmouseover="Mirrorball.play()" onmouseleave="Mirrorball.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song">Mirrorball</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:41</li>
+                    </ul>
+                    <ul class="track" onmouseover="Seven.play()" onmouseleave="Seven.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">Seven</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:41</li>
+                    </ul>
+                    <ul class="track" onmouseover="August.play()" onmouseleave="August.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">August</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:34</li>
+                    </ul>
+                    <ul class="track" onmouseover="ThisIsMeTrying.play()" onmouseleave="ThisIsMeTrying.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song">This Is Me Trying</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:27</li>
+                    </ul>
+                    <ul class="track" onmouseover="IllicitAffairs.play()" onmouseleave="IllicitAffairs.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Illicit Affairs</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:23</li>
+                    </ul>
+                    <ul class="track" onmouseover="InvisibleString.play()" onmouseleave="InvisibleString.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song">Invisible String</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:25</li>
+                    </ul>
+                    <ul class="track" onmouseover="MadWoman.play()" onmouseleave="MadWoman.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">Mad Woman</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:09</li>
+                    </ul>
+                    <ul class="track" onmouseover="Epiphany.play()" onmouseleave="Epiphany.pause()">
+                        <li class="ntrack">13. </li>
+                        <li class="song">Epiphany</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:01</li>
+                    </ul>
+                    <ul class="track" onmouseover="Betty.play()" onmouseleave="Betty.pause()">
+                        <li class="ntrack">14. </li>
+                        <li class="song single">Betty</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:06</li>
+                    </ul>
+                    <ul class="track" onmouseover="Peace.play()" onmouseleave="Peace.pause()">
+                        <li class="ntrack">15. </li>
+                        <li class="song">Peace</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:06</li>
+                    </ul>
+                    <ul class="track" onmouseover="Hoax.play()" onmouseleave="Hoax.pause()">
+                        <li class="ntrack">16. </li>
+                        <li class="song">Hoax</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:52</li>
+                    </ul>
+                    <ul class="track" onmouseover="TheLakes.play()" onmouseleave="TheLakes.pause()">
+                        <li class="ntrack">17. </li>
+                        <li class="song">The Lakes</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:31</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+            </section>
+        </section>
+
+        <section id="Sunrise" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>Sunrise – Day6</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 2017</p></div>
+                <div class="genre"><p>Género: Rock, Pop</p></div>
+            </section>
+            <input type="checkbox" id="sunrisemenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section> 
+            <section class="tracklist" id="sunrisetracks">
+            
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="LeanOnMe.play()" onmouseleave="LeanOnMe.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song">Lean On Me</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:29</li>
+                    </ul>
+                    <ul class="track" onmouseover="ISmile.play()" onmouseleave="ISmile.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song single">I Smile</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:47</li>
+                    </ul>
+                    <ul class="track" onmouseover="ManInAMovie.play()" onmouseleave="ManInAMovie.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song">Man In A Movie</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:46</li>
+                    </ul>
+                    <ul class="track" onmouseover="IWait.play()" onmouseleave="IWait.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song single">I Wait</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:38</li>
+                    </ul>
+                    <ul class="track" onmouseover="HowCanISay.play()" onmouseleave="HowCanISay.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song single">How Can I Say</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:21</li>
+                    </ul>
+                    <ul class="track" onmouseover="LettingGo.play()" onmouseleave="LettingGo.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song">Letting Go</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:11</li>
+                    </ul>
+                    <ul class="track" onmouseover="IWould.play()" onmouseleave="IWould.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">I Would</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:43</li>
+                    </ul>
+                    <ul class="track" onmouseover="GoodbyeWinter.play()" onmouseleave="GoodbyeWinter.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">Goodbye Winter</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:07</li>
+                    </ul>
+                    <ul class="track" onmouseover="ImSerious.play()" onmouseleave="ImSerious.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song single">I'm Serious</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:14</li>
+                    </ul>
+                    <ul class="track" onmouseover="SayWow.play()" onmouseleave="SayWow.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Say Wow</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:09</li>
+                    </ul>
+                    <ul class="track" onmouseover="DanceDance.play()" onmouseleave="DanceDance.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song single">Dance Dance</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:43</li>
+                    </ul>
+                    <ul class="track" onmouseover="MyDay.play()" onmouseleave="MyDay.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">My Day</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:00</li>
+                    </ul>
+                    <ul class="track" onmouseover="YouWereBeautiful.play()" onmouseleave="YouWereBeautiful.pause()">
+                        <li class="ntrack">13. </li>
+                        <li class="song single">You Were Beautiful</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:43</li>
+                    </ul>
+                    <ul class="track" onmouseover="Congratulations.play()" onmouseleave="Congratulations.pause()">
+                        <li class="ntrack">14. </li>
+                        <li class="song">Congratulations (Final Version)</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:47</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+            </section>
+        </section>
+
+            <section id="YoungBlood" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>Youngblood – 5Seconds of Summer</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 2018</p></div>
+                <div class="genre"><p>Género: Rock, Pop</p></div>
+            </section>
+            <input type="checkbox" id="youngbloodmenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section> 
+            <section class="tracklist" id="youngbloodtracks">
+            
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="youngblood.play()" onmouseleave="youngblood.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song single">Youngblood</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:23</li>
+                    </ul>
+                    <ul class="track" onmouseover="wantyouback.play()" onmouseleave="wantyouback.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song single">Want You Back</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:53</li>
+                    </ul>
+                    <ul class="track" onmouseover="lietome.play()" onmouseleave="lietome.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song single">Lie To Me</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:30</li>
+                    </ul>
+                    <ul class="track" onmouseover="valentine.play()" onmouseleave="valentine.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song single">Valentine</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:17</li>
+                    </ul>
+                    <ul class="track" onmouseover="talkfast.play()" onmouseleave="talkfast.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song">Talk Fast</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:07</li>
+                    </ul>
+                    <ul class="track" onmouseover="movingalong.play()" onmouseleave="movingalong.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song">Moving Along</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:18</li>
+                    </ul>
+                    <ul class="track" onmouseover="ifwallscouldtalk.play()" onmouseleave="ifwallscouldtalk.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">If Walls Could Talk</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:02</li>
+                    </ul>
+                    <ul class="track" onmouseover="betterman.play()" onmouseleave="betterman.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">Better Man</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:10</li>
+                    </ul>
+                    <ul class="track" onmouseover="more.play()" onmouseleave="more.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song">More</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:14</li>
+                    </ul>
+                    <ul class="track" onmouseover="whywontyouloveme.play()" onmouseleave="whywontyouloveme.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Why Won't You Love Me?</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:21</li>
+                    </ul>
+                    <ul class="track" onmouseover="wokeupinjapan.play()" onmouseleave="wokeupinjapan.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song">Woke Up In Japan</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:37</li>
+                    </ul>
+                    <ul class="track" onmouseover="wmptywallets.play()" onmouseleave="wmptywallets.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">Empty Wallets</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:08</li>
+                    </ul>
+                    <ul class="track" onmouseover="ghostofyou.play()" onmouseleave="ghostofyou.pause()">
+                        <li class="ntrack">13. </li>
+                        <li class="song">Ghost Of You</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:17</li>
+                    </ul>
+                    <ul class="track" onmouseover="monsteramongmen.play()" onmouseleave="monsteramongmen.pause()">
+                        <li class="ntrack">14. </li>
+                        <li class="song">Monster Among Men</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:12</li>
+                    </ul>
+                    <ul class="track" onmouseover="meetyouthere.play()" onmouseleave="meetyouthere.pause()">
+                        <li class="ntrack">15. </li>
+                        <li class="song">Meet You There</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:11</li>
+                    </ul>
+                    <ul class="track" onmouseover="babylon.play()" onmouseleave="babylon.pause()">
+                        <li class="ntrack">16. </li>
+                        <li class="song">Babylon</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:33</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+            </section>
+        </section>
+
+            <section id="The-Black-Parade" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>The Black Parade – My Chemical Romance</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 2006</p></div>
+                <div class="genre"><p>Género: Rock</p></div>
+            </section>
+            <input type="checkbox" id="blackparademenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section> 
+            <section class="tracklist" id="blackparadetracks">
+            
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="TheEnd.play()" onmouseleave="TheEnd.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song">The End</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">1:52</li>
+                    </ul>
+                    <ul class="track" onmouseover="Dead.play()" onmouseleave="Dead.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song">Dead</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:15</li>
+                    </ul>
+                    <ul class="track" onmouseover="ThisIsHowIDisappear.play()" onmouseleave="ThisIsHowIDisappear.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song">This Is How I Disappear</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:59</li>
+                    </ul>
+                    <ul class="track" onmouseover="TheSharpestLives.play()" onmouseleave="TheSharpestLives.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song">The Sharpest Lives</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:20</li>
+                    </ul>
+                    <ul class="track" onmouseover="WelcomeToTheBlackParade.play()" onmouseleave="WelcomeToTheBlackParade.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song single">Welcome To The Black Parade</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:11</li>
+                    </ul>
+                    <ul class="track" onmouseover="IDontLoveYou.play()" onmouseleave="IDontLoveYou.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song single">I Don't Love You</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:58</li>
+                    </ul>
+                    <ul class="track" onmouseover="HousesOfWolves.play()" onmouseleave="HousesOfWolves.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">Houses Of Wolves</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:04</li>
+                    </ul>
+                    <ul class="track" onmouseover="Cancer.play()" onmouseleave="Cancer.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">Cancer</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:22</li>
+                    </ul>
+                    <ul class="track" onmouseover="Mama.play()" onmouseleave="Mama.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song">Mama</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:39</li>
+                    </ul>
+                    <ul class="track" onmouseover="Sleep.play()" onmouseleave="Sleep.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Sleep</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:43</li>
+                    </ul>
+                    <ul class="track" onmouseover="Teenagers.play()" onmouseleave="Teenagers.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song single">Teenagers</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:41</li>
+                    </ul>
+                    <ul class="track" onmouseover="Disenchanted.play()" onmouseleave="Disenchanted.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">Disenchanted</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:55</li>
+                    </ul>
+                    <ul class="track" onmouseover="FamousLastWords.play()" onmouseleave="FamousLastWords.pause()">
+                        <li class="ntrack">13. </li>
+                        <li class="song single">Famous Last Words</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:59</li>
+                    </ul>
+                    <ul class="track" onmouseover="Blood.play()" onmouseleave="Blood.pause()">
+                        <li class="ntrack">14. </li>
+                        <li class="song">Blood (Hidden Track)</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">1:23</li>
+                    </ul>
+                </ol>
+            </section>
+        
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+            </section>
+        </section>
+
+
+        </section>
+        <section id="Electra-Heart" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>Electra Heart – Marina And The Diamonds</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 2012</p></div>
+                <div class="genre"><p>Género: Electronic, Pop</p></div>
+            </section>
+            <input type="checkbox" id="electramenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section> 
+            <section id="electra-tracklist" class="tracklist">
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="bubblegumBitch.play()" onmouseleave="bubblegumBitch.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song">Bubblegum Bitch</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">2:33</li>
+                    </ul>
+                    <ul class="track" onmouseover="Primadonna.play()" onmouseleave="Primadonna.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song single">Primadonna</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:41</li>
+                    </ul>
+                    <ul class="track" onmouseover="Lies.play()" onmouseleave="Lies.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song">Lies</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:46</li>
+                    </ul>
+                    <ul class="track" onmouseover="Homewrecker.play()" onmouseleave="Homewrecker.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song">Homewrecker</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:23</li>
+                    </ul>
+                    <ul class="track" onmouseover="StarringRole.play()" onmouseleave="StarringRole.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song">Starring Role</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:27</li>
+                    </ul>
+                    <ul class="track" onmouseover="TheStateOfDreaming.play()" onmouseleave="TheStateOfDreaming.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song">The State Of Dreaming</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:37</li>
+                    </ul>
+                    <ul class="track" onmouseover="PowerControl.play()" onmouseleave="PowerControl.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song single">Power & Control</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:48</li>
+                    </ul>
+                    <ul class="track" onmouseover="LivingDead.play()" onmouseleave="LivingDead.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">Living Dead</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:03</li>
+                    </ul>
+                    <ul class="track" onmouseover="TeenIdle.play()" onmouseleave="TeenIdle.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song">Teen Idle</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:14</li>
+                    </ul>
+                    <ul class="track" onmouseover="ValleyOfTheDolls.play()" onmouseleave="ValleyOfTheDolls.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Valley Of The Dolls</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:14</li>
+                    </ul>
+                    <ul class="track" onmouseover="Hypocrates.play()" onmouseleave="Hypocrates.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song">Hypocrates</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:01</li>
+                    </ul>
+                    <ul class="track" onmouseover="FearAndLoathing.play()" onmouseleave="FearAndLoathing.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">Fear And Loathing</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">6:08</li>
+                    </ul>
+                    <ul class="track" onmouseover="Radioactive.play()" onmouseleave="Radioactive.pause()">
+                        <li class="ntrack">13. </li>
+                        <li class="song">Radioactive</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:46</li>
+                    </ul>
+                    <ul class="track" onmouseover="SexYeah.play()" onmouseleave="SexYeah.pause()">
+                        <li class="ntrack">14. </li>
+                        <li class="song">Sex Yeah</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:46</li>
+                    </ul>
+                    <ul class="track" onmouseover="LonelyHeartsClub.play()" onmouseleave="LonelyHeartsClub.pause()">
+                        <li class="ntrack">15. </li>
+                        <li class="song">Lonely Hearts Club</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:01</li>
+                    </ul>
+                    <ul class="track" onmouseover="BuyTheStars.play()" onmouseleave="BuyTheStars.pause()">
+                        <li class="ntrack">16. </li>
+                        <li class="song">Buy The Stars</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:47</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+                
+            </section>
+
+        </section>
+        <section id="Born-This-Way" class="album-holder">
+            <section class="cover">
+                <div class="front"></div>
+                <div class="back"></div>
+            </section>
+            <section class="album-title">
+                <h2>Born This Way – Lady GaGa</h2>
+            </section>
+            <section class="album-info">
+                <div class="year"><p>Fecha de lanzamiento: 2011</p></div>
+                <div class="genre"><p>Género: Electronic, Rock, Pop</p></div>
+            </section>
+            <input type="checkbox" id="btwmenu" name="showTracklist" class="ShowTrk">
+            <section class="btns-tracklist">
+                <div class="show-tracklist_btn btn_holder">
+                    <div class="show btn"><i class="fa-solid fa-angle-down"></i></div>
+                    <label for="showTracklist"><p class="show-text">Show Tracklist</p></label>
+                    <p class="hide-tracklist_btn hide-text">Hide Tracklist</p>
+                </div>
+            </section> 
+            <section class="tracklist" id="btwtracks">
+            
+                <h2>Track-List</h2>
+                <ol class="tracks">
+                    <ul class="track" onmouseover="MarryTheNight.play()" onmouseleave="MarryTheNight.pause()">
+                        <li class="ntrack">1. </li>
+                        <li class="song single">Marry The Night</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:24</li>
+                    </ul>
+                    <ul class="track" onmouseover="BornThisWay.play()" onmouseleave="BornThisWay.pause()">
+                        <li class="ntrack">2. </li>
+                        <li class="song single">Born This Way</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:20</li>
+                    </ul>
+                    <ul class="track" onmouseover="GovernmentHooker.play()" onmouseleave="GovernmentHooker.pause()">
+                        <li class="ntrack">3. </li>
+                        <li class="song">Government Hooker</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:14</li>
+                    </ul>
+                    <ul class="track" onmouseover="Judas.play()" onmouseleave="Judas.pause()">
+                        <li class="ntrack">4. </li>
+                        <li class="song single">Judas</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:09</li>
+                    </ul>
+                    <ul class="track" onmouseover="Americano.play()" onmouseleave="Americano.pause()">
+                        <li class="ntrack">5. </li>
+                        <li class="song">Americano</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:06</li>
+                    </ul>
+                    <ul class="track" onmouseover="Hair.play()" onmouseleave="Hair.pause()">
+                        <li class="ntrack">6. </li>
+                        <li class="song">Hair</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:08</li>
+                    </ul>
+                    <ul class="track" onmouseover="Scheiße.play()" onmouseleave="Scheiße.pause()">
+                        <li class="ntrack">7. </li>
+                        <li class="song">Scheiße</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:45</li>
+                    </ul>
+                    <ul class="track" onmouseover="BloodyMary.play()" onmouseleave="BloodyMary.pause()">
+                        <li class="ntrack">8. </li>
+                        <li class="song">Bloody Mary</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:04</li>
+                    </ul>
+                    <ul class="track" onmouseover="BadKids.play()" onmouseleave="BadKids.pause()">
+                        <li class="ntrack">9. </li>
+                        <li class="song">Bad Kids</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">3:51</li>
+                    </ul>
+                    <ul class="track" onmouseover="HighwayUnicorn.play()" onmouseleave="HighwayUnicorn.pause()">
+                        <li class="ntrack">10. </li>
+                        <li class="song">Highway Unicorn (Road To Love)</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:15</li>
+                    </ul>
+                    <ul class="track" onmouseover="HeavyMetalLover.play()" onmouseleave="HeavyMetalLover.pause()">
+                        <li class="ntrack">11. </li>
+                        <li class="song">Heavy Metal Lover</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:12</li>
+                    </ul>
+                    <ul class="track" onmouseover="ElectricChapel.play()" onmouseleave="ElectricChapel.pause()">
+                        <li class="ntrack">12. </li>
+                        <li class="song">Electric Chapel</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">4:12</li>
+                    </ul>
+                    <ul class="track" onmouseover="YoüAndI.play()" onmouseleave="YoüAndI.pause()">
+                        <li class="ntrack">13. </li>
+                        <li class="song single">Yoü And I</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:07</li>
+                    </ul>
+                    <ul class="track" onmouseover="TheEdgeOfGlory.play()" onmouseleave="TheEdgeOfGlory.pause()">
+                        <li class="ntrack">14. </li>
+                        <li class="song single">The Edge Of Glory</li>
+                        <li><i id="now-playing-" class="fa-solid fa-circle-play now-playing"></i></li>
+                        <li class="duration">5:20</li>
+                    </ul>
+                </ol>
+            </section>
+
+            <section class="radio-animation">
+                <div class="myradio"></div>
+                <div class="animation-text"><p>Hover over the tracks to listen!</p></div>
+                <div class="notes"><img src="../img/radio-animation/notes-gif.gif" alt=""></div>
+            </section>
+
+
+        </section>
+
+        <!-- <div id="player">
+            <div class="player-text"></div>
+            <audio id="now-playing"></audio>
+            <div class="controls">
+                <button id="prev_btn" onclick="prevSong()">
+                    <i class="fa-solid fa-backward-step"></i>
+                </button>
+                <button id="play_btn" onclick="playpauseSong()">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button id="next_btn" onclick="nextSong()">
+                    <i class="fa-solid fa-forward-step"></i>
+                </button>
+            </div>
+        </div> -->
+        
+    </main>
+
+
+        <!-- a kind of magic -->
+        <audio id="OneVision" src="../audio/albums/A Kind Of Magic/01 - One Vision.mp3"></audio>
+        <audio id="AKindOfMagic" src="../audio/albums/A Kind Of Magic/02 - A Kind Of Magic.mp3"></audio>
+        <audio id="OneYearOfLove" src="../audio/albums/A Kind Of Magic/03 - One Year Of Love.mp3"></audio>
+        <audio id="PainIsSoCloseToPleasure" src="../audio/albums/A Kind Of Magic/04 -  Pain Is So Close To Pleasure.mp3"></audio>
+        <audio id="FriendsWillBeFriends" src="../audio/albums/A Kind Of Magic/05 - Friends Will Be Friends.mp3"></audio>
+        <audio id="WhoWantsToLiveForever" src="../audio/albums/A Kind Of Magic/07 - Who Wants To Live Forever.mp3"></audio>
+        <audio id="GimmeThePrize" src="../audio/albums/A Kind Of Magic/08 - Gimme The Prize.mp3"></audio>
+        <audio id="DontLoseYourHead" src="../audio/albums/A Kind Of Magic/08 - Don't Lose Your Head.mp3"></audio>
+        <audio id="PrincesOfTheUniverse" src="../audio/albums/A Kind Of Magic/09 - Princes Of The Universe.mp3"></audio>
+        <audio id="AKindOfAKindOfMagic" src="../audio/albums/A Kind Of Magic/01 - A Kind Of Magic (Highlander Version).mp3"></audio>
+        <audio id="FriendsWillBeFriendsWillBeFriends" src="../audio/albums/A Kind Of Magic/07 - Friends Will Be Friends Will Be Friends.mp3"></audio>
+        <audio id="Forever" src="../audio/albums/A Kind Of Magic/04 - Forever (Piano Version).mp3"></audio>
+
+        <!-- Born This Way -->
+        <audio id="MarryTheNight" src="../audio/albums/Born This Way/1-01 Marry the Night.mp3"></audio>
+        <audio id="BornThisWay" src="../audio/albums/Born This Way/1-02 Born This Way.mp3"></audio>
+        <audio id="GovernmentHooker" src="../audio/albums/Born This Way/1-03 Government Hooker.mp3"></audio>
+        <audio id="Judas" src="../audio/albums/Born This Way/1-04 Judas.mp3"></audio>
+        <audio id="Americano" src="../audio/albums/Born This Way/1-05 Americano.mp3"></audio>
+        <audio id="Hair" src="../audio/albums/Born This Way/1-06 Hair.mp3"></audio>
+        <audio id="Scheiße" src="../audio/albums/Born This Way/1-07 Scheiße.mp3"></audio>
+        <audio id="BloodyMary" src="../audio/albums/Born This Way/1-08 Bloody Mary.mp3"></audio>
+        <audio id="BadKids" src="../audio/albums/Born This Way/1-10 Bad Kids.mp3"></audio>
+        <audio id="HighwayUnicorn" src="../audio/albums/Born This Way/1-12 Highway Unicorn (Road to Love).mp3"></audio>
+        <audio id="HeavyMetalLover" src="../audio/albums/Born This Way/1-13 Heavy Metal Lover.mp3"></audio>
+        <audio id="ElectricChapel" src="../audio/albums/Born This Way/1-14 Electric Chapel.mp3"></audio>
+        <audio id="YoüAndI" src="../audio/albums/Born This Way/1-16 Yoü And I.mp3"></audio>
+        <audio id="TheEdgeOfGlory" src="../audio/albums/Born This Way/1-17 The Edge of Glory.mp3"></audio>
+
+        <!-- The Rise And Fall Of Ziggy Stardust And The Spiders From Mars  -->
+        <audio id="FiveYears" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/01.Five Years.mp3"></audio>
+        <audio id="SoulLove" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/02.Soul Love.mp3"></audio>
+        <audio id="MoonageDaydream" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/03.Moonage Daydream.mp3"></audio>
+        <audio id="Starman" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/04.Starman.mp3"></audio>
+        <audio id="ItAintEasy" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/05.It Ain't Easy.mp3"></audio>
+        <audio id="LadyStardust" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/06.Lady Stardust.mp3"></audio>
+        <audio id="Star" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/07.Star.mp3"></audio>
+        <audio id="HangOnToYourself" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/08.Hang Onto Yourself.mp3"></audio>
+        <audio id="ZiggyStardust" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/09.Ziggy Stardust.mp3"></audio>
+        <audio id="SuffragetteCity" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/10.Suffragette City.mp3"></audio>
+        <audio id="RockNRollSuicide" src="../audio/albums/The Rise And Fall Of Ziggy Stardust And The Spiders From Mars/11.Rock 'N' Roll Suicide.mp3"></audio>
+
+        <!-- Folklore -->
+        <audio id="The1" src="../audio/albums/Folklore/01 the 1.mp3"></audio>
+        <audio id="Cardigan" src="../audio/albums/Folklore/02 cardigan.mp3"></audio>
+        <audio id="TheLastGreatAmericanDynasty" src="../audio/albums/Folklore/03 the last great american dynasty.mp3"></audio>
+        <audio id="Exile" src="../audio/albums/Folklore/04 exile (feat. Bon Iver).mp3"></audio>
+        <audio id="MyTearsRicochet" src="../audio/albums/Folklore/05 my tears ricochet.mp3"></audio>
+        <audio id="Mirrorball" src="../audio/albums/Folklore/06 mirrorball.mp3"></audio>
+        <audio id="Seven" src="../audio/albums/Folklore/07 seven.mp3"></audio>
+        <audio id="August" src="../audio/albums/Folklore/08 august.mp3"></audio>
+        <audio id="ThisIsMeTrying" src="../audio/albums/Folklore/09 this is me trying.mp3"></audio>
+        <audio id="IllicitAffairs" src="../audio/albums/Folklore/10 illicit affairs.mp3"></audio>
+        <audio id="InvisibleString" src="../audio/albums/Folklore/11 invisible string.mp3"></audio>
+        <audio id="MadWoman" src="../audio/albums/Folklore/12 mad woman.mp3"></audio>
+        <audio id="Epiphany" src="../audio/albums/Folklore/13 epiphany.mp3"></audio>
+        <audio id="Betty" src="../audio/albums/Folklore/14 betty.mp3"></audio>
+        <audio id="Peace" src="../audio/albums/Folklore/15 peace.mp3"></audio>
+        <audio id="Hoax" src="../audio/albums/Folklore/16 hoax.mp3"></audio>
+        <audio id="TheLakes" src="../audio/albums/Folklore/17 the lakes.mp3"></audio>
+
+        <!-- sunrise -->
+        <audio id="LeanOnMe" src="../audio/albums/SUNRISE/01. 오늘은 내게.mp3"></audio>
+        <audio id="ISmile" src="../audio/albums/SUNRISE/02. 반드시 웃는다.mp3"></audio>
+        <audio id="ManInAMovie" src="../audio/albums/SUNRISE/03. Man in a movie.mp3"></audio>
+        <audio id="IWait" src="../audio/albums/SUNRISE/04. 아 왜 (I Wait).mp3"></audio>
+        <audio id="HowCanISay" src="../audio/albums/SUNRISE/05. 어떻게 말해.mp3"></audio>
+        <audio id="LettingGo" src="../audio/albums/SUNRISE/06. 놓아 놓아 놓아 (Rebooted Ver.).mp3"></audio>
+        <audio id="IWould" src="../audio/albums/SUNRISE/07. 그럴 텐데.mp3"></audio>
+        <audio id="GoodbyeWinter" src="../audio/albums/SUNRISE/08. 겨울이 간다.mp3"></audio>
+        <audio id="ImSerious" src="../audio/albums/SUNRISE/09. 장난 아닌데.mp3"></audio>
+        <audio id="SayWow" src="../audio/albums/SUNRISE/10. Say Wow.mp3"></audio>
+        <audio id="DanceDance" src="../audio/albums/SUNRISE/11. DANCE DANCE.mp3"></audio>
+        <audio id="MyDay" src="../audio/albums/SUNRISE/12. My Day.mp3"></audio>
+        <audio id="YouWereBeautiful" src="../audio/albums/SUNRISE/13. 예뻤어.mp3"></audio>
+        <audio id="Congratulations" src="../audio/albums/SUNRISE/14. Congratulations (Final Ver.).mp3"></audio>
+
+        <!-- the black parade -->
+        <audio id="TheEnd" src="../audio/albums/The black parade/01 - The End.mp3"></audio>
+        <audio id="Dead" src="../audio/albums/The black parade/02 - Dead!.mp3"></audio>
+        <audio id="ThisIsHowIDisappear" src="../audio/albums/The black parade/03 - This Is How I Disappear.mp3"></audio>
+        <audio id="TheSharpestLives" src="../audio/albums/The black parade/04 - The Sharpest Lives.mp3"></audio>
+        <audio id="WelcomeToTheBlackParade" src="../audio/albums/The black parade/05 - Welcome To The Black Parade.mp3"></audio>
+        <audio id="IDontLoveYou" src="../audio/albums/The black parade/06 - I Don't Love You.mp3"></audio>
+        <audio id="HousesOfWolves" src="../audio/albums/The black parade/07 - House Of Wolves.mp3"></audio>
+        <audio id="Cancer" src="../audio/albums/The black parade/08 - Cancer.mp3"></audio>
+        <audio id="Mama" src="../audio/albums/The black parade/09 - Mama.mp3"></audio>
+        <audio id="Sleep" src="../audio/albums/The black parade/10 - Sleep.mp3"></audio>
+        <audio id="Teenagers" src="../audio/albums/The black parade/11 - Teenagers.mp3"></audio>
+        <audio id="Disenchanted" src="../audio/albums/The black parade/12 - Disenchanted.mp3"></audio>
+        <audio id="FamousLastWords" src="../audio/albums/The black parade/13 - Famous Last Words.mp3"></audio>
+        <audio id="Blood" src="../audio/albums/The black parade/14 - Blood (Hidden Track).mp3"></audio>
+
+        <!-- LM5 -->
+        <audio id="TheNationalAnthem" src="../audio/albums/LM5/01 The National Manthem.mp3"></audio>
+        <audio id="WomanLikeMe" src="../audio/albums/LM5/02 Woman Like Me (feat. Nicki Minaj).mp3"></audio>
+        <audio id="ThinkAboutUs" src="../audio/albums/LM5/03 Think About Us.mp3"></audio>
+        <audio id="Strip" src="../audio/albums/LM5/04 Strip (feat. Sharaya J).mp3"></audio>
+        <audio id="MonsterInMe" src="../audio/albums/LM5/05 Monster In Me.mp3"></audio>
+        <audio id="JoanOfArc" src="../audio/albums/LM5/06 Joan of Arc.mp3"></audio>
+        <audio id="LoveAGirlRight" src="../audio/albums/LM5/07 Love a Girl Right.mp3"></audio>
+        <audio id="AmericanBoy" src="../audio/albums/LM5/08 American Boy.mp3"></audio>
+        <audio id="ToldYouSo" src="../audio/albums/LM5/09 Told You So.mp3"></audio>
+        <audio id="Wasabi" src="../audio/albums/LM5/10 Wasabi.mp3"></audio>
+        <audio id="MoreThanWords" src="../audio/albums/LM5/11 More Than Words (feat. Kamille).mp3"></audio>
+        <audio id="Motivate" src="../audio/albums/LM5/12 Motivate.mp3"></audio>
+        <audio id="Notice" src="../audio/albums/LM5/13 Notice.mp3"></audio>
+        <audio id="TheCure" src="../audio/albums/LM5/14 The Cure.mp3"></audio>
+        <audio id="ForgetYouNot" src="../audio/albums/LM5/15 Forget You Not.mp3"></audio>
+        <audio id="WomansWorld" src="../audio/albums/LM5/16 Woman's World.mp3"></audio>
+        <audio id="TheCureStripped" src="../audio/albums/LM5/17 The Cure (Stripped).mp3"></audio>
+        <audio id="OnlyYouft.CheatCodes" src="../audio/albums/LM5/18 Only You.mp3"></audio>
+
+        <!-- Electra Heart -->
+        <audio id="bubblegumBitch" src="../audio/albums/Electra-Heart/01 Bubblegum Bitch.mp3"></audio>
+        <audio id="Primadonna" src="../audio/albums/Electra-Heart/02 Primadonna Girl.mp3"></audio>
+        <audio id="Lies" src="../audio/albums/Electra-Heart/03 Lies.mp3"></audio>
+        <audio id="Homewrecker" src="../audio/albums/Electra-Heart/04 Homewrecker.mp3"></audio>
+        <audio id="StarringRole" src="../audio/albums/Electra-Heart/05 Starring Role.mp3"></audio>
+        <audio id="TheStateOfDreaming" src="../audio/albums/Electra-Heart/06 The state of dreaming.mp3"></audio>
+        <audio id="PowerControl" src="../audio/albums/Electra-Heart/07 Power & Control.mp3"></audio>
+        <audio id="LivingDead" src="../audio/albums/Electra-Heart/08 Living Dead.mp3"></audio>
+        <audio id="TeenIdle" src="../audio/albums/Electra-Heart/09 Teen Idle.mp3"></audio>
+        <audio id="ValleyOfTheDolls" src="../audio/albums/Electra-Heart/10 Valley of the dolls.mp3"></audio>
+        <audio id="Hypocrates" src="../audio/albums/Electra-Heart/11 Hypocrates.mp3"></audio>
+        <audio id="FearAndLoathing" src="../audio/albums/Electra-Heart/12 Fear and loathing.mp3"></audio>
+        <audio id="Radioactive" src="../audio/albums/Electra-Heart/13 Radioactive.mp3"></audio>
+        <audio id="SexYeah" src="../audio/albums/Electra-Heart/14 Sex yeah.mp3"></audio>
+        <audio id="LonelyHeartsClub" src="../audio/albums/Electra-Heart/15 Lonely hearts club.mp3"></audio>
+        <audio id="BuyTheStars" src="../audio/albums/Electra-Heart/16 Buy the stars.mp3"></audio>
+
+        <!-- Youngblood -->
+        <audio id="youngblood" src="../audio/albums/Youngblood (Deluxe)/01 Youngblood.mp3"></audio>
+        <audio id="wantyouback" src="../audio/albums/Youngblood (Deluxe)/02 Want You Back.mp3"></audio>
+        <audio id="lietome" src="../audio/albums/Youngblood (Deluxe)/03 Lie to Me.mp3"></audio>
+        <audio id="valentine" src="../audio/albums/Youngblood (Deluxe)/04 Valentine.mp3"></audio>
+        <audio id="talkfast" src="../audio/albums/Youngblood (Deluxe)/05 Talk Fast.mp3"></audio>
+        <audio id="movingalong" src="../audio/albums/Youngblood (Deluxe)/06 Moving Along.mp3"></audio>
+        <audio id="ifwallscouldtalk" src="../audio/albums/Youngblood (Deluxe)/07 If Walls Could Talk.mp3"></audio>
+        <audio id="betterman" src="../audio/albums/Youngblood (Deluxe)/08 Better Man.mp3"></audio>
+        <audio id="more" src="../audio/albums/Youngblood (Deluxe)/09 More.mp3"></audio>
+        <audio id="whywontyouloveme" src="../audio/albums/Youngblood (Deluxe)/10 Why Won't You Love Me.mp3"></audio>
+        <audio id="wokeupinjapan" src="../audio/albums/Youngblood (Deluxe)/11 Woke Up in Japan.mp3"></audio>
+        <audio id="wmptywallets" src="../audio/albums/Youngblood (Deluxe)/12 Empty Wallets.mp3"></audio>
+        <audio id="ghostofyou" src="../audio/albums/Youngblood (Deluxe)/13 Ghost of You.mp3"></audio>
+        <audio id="monsteramongmen" src="../audio/albums/Youngblood (Deluxe)/14 Monster Among Men.mp3"></audio>
+        <audio id="meetyouthere" src="../audio/albums/Youngblood (Deluxe)/15 Meet You There.mp3"></audio>
+        <audio id="babylon" src="../audio/albums/Youngblood (Deluxe)/16 Babylon.mp3"></audio>
+
+    <footer>
+        <div id="social-media">
+          <h4>Follow us on our social media!</h4>
+          <ul class="social-media-list">
+            <li class="twt"><i class="fa-brands fa-twitter"></i></li>
+            <li class="ig"><i class="fa-brands fa-instagram"></i></li>
+            <li class="fb"><i class="fa-brands fa-facebook"></i></li>
+            <li class="sp"><i class="fa-brands fa-spotify"></i></li>
+          </ul>
+        </div>
+        <div id="phrase"><h2>Always on Your Radio</h2></div>
+        <div id="copyright">All rights reserved</div>
+      </footer>
+
+    </body>
+</html>

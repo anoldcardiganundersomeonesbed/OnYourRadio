@@ -1,0 +1,20 @@
+@media screen and (max-width: 1000px) and (min-width: 640px){
+
+    
+    .quiz-img {
+        width: 35%;
+    }
+
+    .text-content {
+        width: 65%;
+    }
+
+    .quiz-title h3 {
+        font-size: 100%;
+    }
+
+    .quiz-info {
+        font-size: 90%;
+    }
+
+}

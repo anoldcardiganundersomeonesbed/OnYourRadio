@@ -1,0 +1,330 @@
+@media screen and (max-width:640px){
+    body{
+        display: block;
+    }
+    main {
+        width: 100%;
+    }
+
+    #logo{
+        display: block;
+        width: 100%;
+        transform: scale(0.8);
+    }
+
+    #mainlogo{
+        display: none;
+    }
+
+    #nav-searchbar{
+        display: none;
+    }
+
+    #op-searchbar{
+        display: block;
+    }
+
+    #op-searchbar *{
+        display: inline-block;
+    }
+
+    #op-searchbar input {
+        
+        width: 80%;
+        color:#c2c2c2;
+        border: 2px solid rgba(61, 61, 61, 0.705);
+        border-radius: 100px;
+    }
+
+    #op-searchbar img {
+        width: 35px;
+        height: 35px;
+        margin: auto;
+        margin-right: 7%;
+        transform: translateY(1.5vh);
+    }
+
+
+    .nav-hide {
+        display: block;
+    }
+
+    .nav {
+        visibility: hidden;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        transition: all 0.5s ease;
+        position: fixed;
+        top: 13.5vh;
+        left: -40%;
+        background-color: #0c0c0c48;
+    }
+
+    #menops{
+        border: none;
+    }
+
+
+    #hmgmenu{
+        visibility: hidden;
+        width: 10%;
+        height: 10%;
+        position: absolute;
+        left: 5%;
+        top: 1%;
+    }
+
+    #hmgmenu:checked ~ #menu{
+        visibility: visible;
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+    #hmgmenu:checked ~ #menu > #menops > .option {
+        transform: translateY(0);
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+
+    #hmgmenu:checked  #imgmenu{
+        background-color: #222;
+        transition: all 0.3s ease;
+    }
+
+    #hmgmenu:checked ~ main{
+        position: fixed;
+    }
+
+
+    #imgmenu {
+        cursor: pointer;
+        background-color: white;
+        border-radius: 100%;
+        display: block;
+        width: 11%;
+        position: absolute;
+        left: 4.5%;
+        top: 3%;
+        transition: all 0.3s ease;
+        max-height: 40px;
+        max-width: 40px;
+    }
+
+    #imgmenu:hover {
+        transform: scale(1.3) rotate(360deg);
+        transition: all 0.3s ease;
+    }
+
+    #menu .hide-icon{
+        display: none;
+    }
+
+
+    .option {
+        position: relative;
+        top: -0.6vh;
+        display: block;
+        width: 100%;
+        background-color: #f3cc4a;
+    }
+
+    #nav-searchbar{
+        display: none;
+    }
+
+    .option:first-child{
+        border-top: black 2px solid;
+    }
+
+        #op-searchbar{
+            opacity: 0;
+            transform: translateX(-140%);
+            transition: all 0.5s ease;
+        }
+
+        #home{
+            opacity: 0;
+            transform: translateX(-180%);
+            transition: all 0.5s ease;
+        }
+
+        #quiz-link{
+            opacity: 0;
+            transform: translateX(-220%);
+            transition: all 0.5s ease;
+        }
+
+        #playlistLink{
+            opacity: 0;
+            transform: translateX(-260%);
+            transition: all 0.5s ease;
+        }
+
+        #libraryLink{
+            opacity: 0;
+            transform: translateX(-300%);
+            transition: all 0.5s ease;
+        }
+
+
+    .option > a{
+        display: block;
+        padding: 7%;
+        border-radius: 0px;
+        transition: all ease 0.3s;
+        border-top: rgba(34, 34, 34, 0.431) solid 1px;
+    }
+
+    .option > a h3{
+        display: block;
+    }
+
+        .option >a:hover{
+            border: none;
+            transform: scale(1.15);
+            background-color: #fefefea6;
+            color: #222;
+            border: rgb(230, 230, 230) solid 3px;
+            
+        }
+
+    .search-bar {
+        padding: 4vh 10%;
+        display: inline-flex;
+        align-items: center;
+
+    }
+
+        #hmg-search{
+            width: 75%;
+            border: solid 1px #2222229d;
+        }
+
+        #hmg-search-icon{
+            opacity: 70%;
+            margin: 1vh;
+            transition: all ease 0.2s;
+        }
+
+        #hmg-search-icon:hover{
+            background-color: white;
+            border-radius: 10px;
+            padding: 0.5vh;
+            transform: scale(1.1);
+            cursor: pointer;
+            transition: all ease 0.3s;
+        }
+
+        #hmgmenu:checked ~ label > #imgmenu{
+           filter: invert();
+           transition: all ease 0.7s;
+        }
+
+        .hide-icon ~ h3{
+            display: none;
+        }
+        
+        .login {
+            right: 5%;
+            top: 1vh;
+        }
+
+        .login button {
+            transform: scale(0.8) translateY(1vh);
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            
+        }
+
+        .login button img {
+            display: block;
+            height: 100%;
+            max-height: 55px;
+            max-width: 55px;
+            padding: 5%;
+            transition: all 0.3s ease-out;
+            
+        }
+
+        .black {
+            opacity: 0;
+            position: absolute;
+            top: 0%;
+            left: 0;
+            transition: all 0.3s ease-out;
+        }
+    
+        .login button:hover .black{
+            opacity: 1;
+            transition: all 0.3s ease-out;
+        }
+        .login button:hover .white{
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+    
+        .login button:hover .black::after {
+            opacity: 0;
+            transition: all 0.3s ease-out;
+        }
+    
+        .login button:hover .white ::after {
+            opacity: 1;
+            transition: all 0.3s ease-out;
+        }
+    
+
+        #social-media{
+            padding: 3%;
+            padding-top: 4vh
+        }
+        
+        #social-media h4 {
+            font-size: 85%;
+            margin-bottom: 1vh;
+        }
+        
+        #social-media li{
+            margin: 2%;
+            padding: 1.5vh;
+        }
+
+        li i {
+            transform: scale(1.5);
+        }
+
+        .ig i{
+            transform: scale(1.9);
+        }
+
+        .twt:hover i{
+            transform: scale(1.7);
+        }
+        
+        .ig:hover i{
+            transform: scale(2.1);
+        }
+        
+        .fb:hover i{
+            transform: scale(1.7);
+        }
+        
+        .sp:hover i{
+            transform: scale(1.7);
+        }
+        #phrase h2 {
+            font-size: 170%;
+            padding: 2vh;
+        }
+        
+        #copyright{
+            margin-top: 2vh;
+            padding: 2%;
+            color: #fefefe;
+            background-color: rgb(24, 24, 24);
+        }
+
+}

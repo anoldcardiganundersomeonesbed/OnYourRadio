@@ -1,0 +1,385 @@
+
+main {
+    background-color: transparent;
+}
+.album-holder {
+    background-color: #fad157;
+    margin: 2% auto;
+    width: 100%;
+    padding: 3%;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-template-rows: 10vh 55vh 10vh auto;
+    grid-template-areas: 
+    " cover title"
+    " cover tracklist"
+    " info tracklist"
+    " preview tracklist";
+}
+.cover {
+    grid-area: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: scale(0.9);
+}
+
+.front{
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    transform: rotate3d(0,1,0,0deg);
+    transition: transform 1s ease;
+}
+
+.cover:hover > .front {
+    transform: rotate3d(0,1,0,180deg);
+    transition: transform 1s ease;
+}
+
+    .cover:hover::after > .front {
+        transform: rotate3d(0,1,0,0deg);
+        transition: transform 1s ease;
+    }
+
+.back {
+    backface-visibility: hidden;
+    height: 100%;
+    position: relative;
+    top: -100%;
+    transform: rotate3d(0,1,0,180deg);
+    transition: transform 1s ease;
+}
+
+.cover:hover > .back {
+    transform: rotate3d(0,1,0,0deg);
+    transition: transform 1s ease;
+}
+
+.cover:hover::after > .back {
+    transform: rotate3d(0,1,0,180deg);
+    transition: transform 1s ease;
+}
+
+.album-title {
+    grid-area: title;
+    text-align: center;
+}
+.album-title h2 {
+    padding: 4%;
+    font-size: 260%;
+}
+.album-info{
+    grid-area: info;
+}
+.album-info p{
+    padding-left: 5%;
+    font-size: 130%;
+    font-weight: 700;
+}
+
+.track_btn{
+    width: 100%;
+}
+
+.tracklist {
+    padding: 3%;
+    padding-left: 10%;
+    width: 100%;
+    grid-area: tracklist;
+}
+
+.tracklist h2 {
+    font-size: 130%;
+    padding-bottom: 1vh;
+    margin-bottom: 1vh;
+    border-bottom: double 5px #8d8d8d;
+}
+.tracklist .track{
+    cursor: pointer;
+    border-bottom: solid #8d8d8d 1px;
+    width: 100%;
+    padding: 1.5% 0;
+}
+
+.tracklist .track:hover{
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+.tracklist .track .single{
+    font-weight: 800;
+}
+
+.tracklist .track:last-child{
+    border-bottom: none;
+}
+
+.tracklist .track li {
+    display: inline-block;
+    font-size: 130%;
+}
+
+
+.song {
+    margin-right: 2%;
+}
+
+.duration {
+    float: right;
+}
+.ntrack {
+    width: 10%;
+}
+
+#player {
+    opacity: 0;
+    background-color: #fad157;
+    position: fixed;
+    bottom: 2vh;
+    right: 3%;
+    width: 15%;
+    height: 30vh;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.controls{
+    position: relative;
+    padding: 0.5vh 0%;
+    top: 21vh;
+    width: 100%;
+    display: block;
+    background-color: #31313107;
+    border-top: double 5px #72727265;
+}
+
+.controls button{
+    padding: 5%;
+    border-radius: 100%;
+    margin: 0 2%;
+    display: inline-block;
+    filter: none;
+    color: #222;
+    background-color: rgba(34, 34, 34, 0);
+    transition: all 0.5s ease;
+}
+
+button.play {
+    padding: 9%;
+    margin: 0 20%;
+}
+
+button.play i{
+    transform: scale(1.7);
+}
+
+
+button:hover {
+        background-color: #ffd138;
+        filter: drop-shadow(1px 1px 5px #2222227e);
+        transition: all 0.5s ease;
+    }
+
+    button:hover  i{
+        color: white;
+        transition: all 0.3s ease;
+    }
+
+.track:hover .now-playing{
+    opacity: 1;
+    animation: playing 1.8s ease-in-out 0s infinite normal;
+}
+
+.now-playing{
+    opacity: 0;
+    padding: 0.5vh;
+    color: #222;
+    transform: scale(1);
+}
+
+.radio-animation {
+    grid-area: preview;
+    overflow: hidden;
+    /* background-color: white; */
+    max-width: 600px;
+    max-height: 600px;
+    filter: drop-shadow(1px 1px 3px #161616ca);
+    transform: scale(1.2);
+
+}
+
+.animation-text p {
+    text-align: center;
+    padding: 7%;
+    font-weight: 800;
+}
+
+.myradio {
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    background: url(../img/radio-animation/sprite-sheet/spritesheet2.png), repeat-x;
+    background-position: 0;
+    background-size: cover;
+}
+
+.notes img{
+    transform: scale(0.5);
+    position: relative;
+    top: -88vh;
+    left: 20%;
+    opacity: 0%;
+    transition: all 1s ease;
+}
+
+.radio-animation div {
+    position: relative;
+    top: -1vh;
+}
+
+.tracklist:hover ~ .radio-animation .myradio {
+    animation: radioplaying 1.3s steps(24) 0.2s infinite normal ;
+}
+
+.tracklist:hover ~ .radio-animation .notes img {
+    opacity: 45%;
+    transition: all 1s ease-in;
+}
+
+@keyframes radioplaying{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: -7200px;
+    }
+}
+
+
+@keyframes playing {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    0%{
+        transform: rotate3d(0,1,0,0deg);
+    }
+
+    100%{
+        transform: rotate3d(0,1,0,180deg);
+    }
+}
+
+@keyframes show {
+    0%{
+        transform: rotate3d(0,1,0,180deg);
+    }
+    100%{
+        transform: rotate3d(0,1,0,0deg);
+    }
+}
+
+#A-Kind-Of-Magic > .cover > .front {
+    background-image: url(../img/albums/A-Kind-Of-Magic-Front.jpg);
+    background-size: cover;
+}
+
+#A-Kind-Of-Magic > .cover > .back {
+    background-image: url(../img/albums/A-Kind-Of-Magic-Back.jpg);
+    background-size: cover;
+}
+
+#Born-This-Way > .cover > .front {
+    background-image: url(../img/albums/Born-This-Way-Front.jpg);
+    background-size: cover;
+}
+
+#Born-This-Way > .cover > .back {
+    background-image: url(../img/albums/Born-This-Way-Back.jpg);
+    background-size: cover;
+}
+
+#Ziggy-Stardust > .cover > .front {
+    background-image: url(../img/albums/Ziggy-Stardust-front.jpg);
+    background-size: cover;
+}
+
+#Ziggy-Stardust > .cover > .back {
+    background-image: url(../img/albums/Ziggy-Stardust-back.jpg);
+    background-size: cover;
+}
+
+#Folklore > .cover > .front {
+    background-image: url(../img/albums/Folklore-Front.jpg);
+    background-size: cover;
+}
+
+#Folklore > .cover > .back {
+    background-image: url(../img/albums/Folklore-Back.jpg);
+    background-size: cover;
+}
+
+#Sunrise > .cover > .front {
+    background-image: url(../img/albums/Sunrise-Front.jpg);
+    background-size: cover;
+}
+
+#Sunrise > .cover > .back {
+    background-image: url(../img/albums/Sunrise-Back.jpg);
+    background-size: cover;
+}
+#The-Black-Parade > .cover > .front {
+    background-image: url(../img/albums/Black-Parade-front.jpg);
+    background-size: cover;
+}
+
+#The-Black-Parade > .cover > .back {
+    background-image: url(../img/albums/Black-Parade-back.jpg);
+    background-size: cover;
+}
+
+#LM5 > .cover > .front {
+    background-image: url(../img/albums/lm5-front.jpg);
+    background-size: cover;
+}
+
+#LM5 > .cover > .back {
+    background-image: url(../img/albums/lm5-back.jpg);
+    background-size: cover;
+}
+
+#Electra-Heart > .cover > .front {
+    background-image: url(../img/albums/Electra-Heart-Front.jpg);
+    background-size: cover;
+}
+
+#Electra-Heart > .cover > .back {
+    background-image: url(../img/albums/Electra-Heart-Back.jpg);
+    background-size: cover;
+}
+
+#YoungBlood > .cover > .front {
+    background-image: url(../img/albums/youngblood-front.jpg);
+    background-size: cover;
+}
+
+#YoungBlood > .cover >.back {
+    background-image: url(../img/albums/youngblood-back.jpg);
+    background-size: cover;
+}
+
+
+.btns-tracklist, .ShowTrk {
+    display: none;
+}
+

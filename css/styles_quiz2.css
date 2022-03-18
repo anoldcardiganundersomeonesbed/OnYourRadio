@@ -1,0 +1,20 @@
+
+section .que_text{
+    font-style: italic;
+    font-size: 140%;
+    font-weight: 600;
+}
+section .que_text .songname{
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    font-size: 75%;
+    padding-top: 10%;
+}
+
+section .option_list .option{
+    width: 100%;
+    font-size: 100%;
+    font-weight: 600;
+}
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+       <!-- general styles -->
+       <link rel="stylesheet" href="../css/login_Styles.css">
+       <link rel="stylesheet" href="../css/styles_general.css">
+    
+       <link media="(max-width: 640px)" rel="stylesheet" href="../css/login_Styles-small.css">
+       <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/login_Styles-med.css">
+       <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/login_Styles-laptop.css">
+      <link media="(min-width: 1600px)" rel="stylesheet" href="../css/login_Styles.css">
+    
+       <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_general-small.css">
+   <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_general-med.css">
+   <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_general-laptop.css">
+   <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_general.css">
+
+    <!-- this page styles -->
+    <link rel="stylesheet" href="../css/styles_general_quizzes.css">
+    <link rel="stylesheet" href="../css/styles_quiz.css">
+
+    <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_general_quizzes-small.css">
+    <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_general_quizzes-med.css">
+    <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_general_quizzes-laptop.css">
+    <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_general_quizzes.css">
+    
+
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/d11c29c02b.js" crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="../img/WEBLOGO2.0.png" type="image/png">
+
+    <title>¿Sabrías decir si estas citas son de un filósofo o de una canción?</title>
+</head>
+<body>
+
+  <header id="header">
+    <figure id="mainlogo">
+      <img src="../img/logopage.png" alt="logo">
+    </figure>
+    <figure id="logo">
+      <img src="../img/WEBLOGO2.0.png" alt="logo">
+    </figure>
+      <div id="login-page" class="focus">
+        <form action="php" method="post" class="zoom">
+      <div class="container">
+        <figure class="pfp"><img id="avatar" src="../img/avatar.png" alt="user"></figure>
+        <label for="username">Usuario:</label>
+        <input type="text" placeholder="Inserte su nombre de usuario..." name="username" required>
+
+        <label for="pw">Contraseña:</label>
+        <input type="password" placeholder="Escriba su contraseña..." name="pw" required>
+
+        <button class="submit" type="submit">Iniciar sesión</button>
+        <label id="rememberme" for="rememberme">
+          <input type="checkbox" checked="checked" name="rememberme">Recordarme
+        </label>
+        <button type="button" class="exitbtn" onclick="document.getElementById('login-page').style.display='none'"><img class="icon" src="../img/cross.png" alt="exit"></button>
+        <div class="more-login">
+          <button type="button" class="createacc"><a href="createAcc.html">Registrarme</a></button>
+          <span class="pw"><a href="#">Olvidé mi contraseña</a></span>
+        </div>
+        </div>
+        </form>
+      </div>
+      
+  </header>
+
+<input type="checkbox" id="hmgmenu" name="hmgmenu">
+<label for="hmgmenu"><img id="imgmenu" class="hide-icon" src="../img/menu-icon.png" alt="menu">
+</label>
+
+<nav id="menu" class="nav">
+  <ul id="menops">
+    <li id="op-searchbar" class="search-bar nav-hide option hbgop">
+      <img class="icon nav-hide" src="../img/search.png" alt="search-icon">
+      <input type="text" placeholder="Buscar...">
+    </li>
+      <li id="home" class="option hbgop">
+          <a href="../index.html"><img class="hide-icon" src="../img/home-icon.png" alt="home"><h3>Inicio</h3></a>
+      </li>
+      <li id="quiz-link" class="option hbgop">
+          <a href="quizes_list.html"><img class="hide-icon" src="../img/quiz-icons.png" alt="quizzes"><h3>Quizzes</h3></a>
+      </li>
+      <li id="playlistLink" class="option hbgop">
+          <a href="playlist.html"><img class="hide-icon" src="../img/playlist.png" alt="playlist"><h3>Playlist Semanal</h3></a>
+      </li>
+      <li id="libraryLink" class="option hbgop">
+        <a href="allAlbums.html"><img class="hide-icon" src="../img/library.png" alt="library"><h3>Librería</h3></a>
+    </li>
+    <li id="nav-searchbar" class="search-bar option smallhide">
+      <img class="search-icon" class="icon" src="../img/search.png" alt="search-icon">
+      <input type="text" placeholder="Buscar...">
+    </li>
+    
+    </ul>
+</nav>
+<div class="login">
+  <button onclick="document.getElementById('login-page').style.display='block'">
+    <img class="hide-icon white" src="../img/profile-White.png" alt="log-in">
+    <img class="hide-icon black" src="../img/profile.png" alt="log-in">
+    <h3>Iniciar Sesión</h3>
+  </button>
+</div>
+
+    <main>
+
+        <div id="quiz-mainpage">
+            <div class="quiz-title"><h1>¿Sabrías decir si estas citas son de un filósofo o de una canción?</h1></div>
+            <div class="text">
+                <p>Probablemente pienses que es fácil diferenciar entre una cita filosófica
+                     y la letra de una canción, pero puede resultar más complicado de lo 
+                     que piensas. ¡Pon a prueba tu conocimiento sobre música y filosofía 
+                     con este test!
+                    </p>
+    
+                    <div id="strbtn" class="start_btn" onclick="document.getElementById('quiz-mainpage').style.display='none'"><button>Start Quiz</button></div>
+            </div>
+            
+        </div>
+
+        <div class="mainbox quiz_box">
+            
+            <section>
+                <div class="que_text">
+
+                </div>
+                <div class="option_list">
+
+                </div>
+                <div class="explanation">
+                    
+                </div>
+            </section>
+
+            <footer  class="quiz-footer">
+                <div class="total_que">
+
+                </div>
+                <button class="next_btn">Next</button>
+            </footer>
+        </div>
+
+        <div class="result_box">
+          <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+            <div class="complete_text">¡Has completado el quiz!</div>
+            <div class="score_text">
+               
+            </div>
+            <div class="buttons">
+                <button class="restart">Volver a jugar</button>
+                <button class="quit">Salir</button>
+            </div>
+        </div>
+    </main>
+    <script src="../script/preguntas1.js"></script>
+    <script src="../script/script_quiz.js"></script>
+
+    <footer>
+      <div id="social-media">
+        <h4>Follow us on our social media!</h4>
+        <ul class="social-media-list">
+          <li class="twt"><i class="fa-brands fa-twitter"></i></li>
+          <li class="ig"><i class="fa-brands fa-instagram"></i></li>
+          <li class="fb"><i class="fa-brands fa-facebook"></i></li>
+          <li class="sp"><i class="fa-brands fa-spotify"></i></li>
+        </ul>
+      </div>
+      <div id="phrase"><h2>Always on Your Radio</h2></div>
+      <div id="copyright">All rights reserved</div>
+    </footer>
+    
+</body>
+</html>

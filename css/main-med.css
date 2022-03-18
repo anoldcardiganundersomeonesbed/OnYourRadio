@@ -1,0 +1,10 @@
+@media screen and (max-width: 1000px) and (min-width: 640px){
+    .slider-link  h3 {
+        font-size: 300%;
+        transform: translate(4%, 76vh);
+    }
+
+    .slider:hover a > h3 {
+        transform: scale(1.15) translate(9%, 65vh);
+    }
+}

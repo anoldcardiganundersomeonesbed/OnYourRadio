@@ -1,0 +1,11 @@
+@media screen and (max-width: 1600px) and (min-width: 1000px){
+    .song-section{
+        min-height: 30vh;
+    }
+
+    .more-info{
+
+        max-height: 25vh;
+    }
+
+}

@@ -1,0 +1,86 @@
+@media screen and (max-width:640px){
+    main{
+        margin: 0;
+        padding: 0;
+        max-height: 100vh;
+    }
+
+    #quiz-mainpage{
+        box-shadow: none;
+        width: 100%;
+        height: 30vh;
+        border-radius: 0;
+    }
+
+    .quiz-title {
+        border-radius: 0;
+        padding: 5vh 5%;
+    }
+
+    .quiz-title h1 {
+        font-size: 65%;
+    }
+
+    #quiz-mainpage p { 
+        font-size: 100%;
+    }
+
+    .start_btn{
+        padding-top: 5vh;
+    }
+
+    .start_btn button {
+        font-size: 180%;
+    }
+
+    .quiz_box{
+        width: 100%;
+        max-height: 100vh;
+        padding-top: 3vh;
+        margin: 5vh 0;
+        border: none;
+        border-radius: 0;
+    }
+
+    section .que_text{
+        width: 80%;
+        margin:auto;
+        margin-bottom: 5vh;
+        padding: 7%;
+        font-size: 150%;
+    }
+
+    section .option_list .option{
+        width: 80%;
+        margin: 2vh auto;
+        padding: 5%;
+        text-align: center;
+        font-size: 115%;
+    }
+    
+    .quiz-footer{
+        margin-top: 3.5vh;
+    }
+
+    .quiz-footer .total_que span{
+        font-size: 100%;
+    }
+
+    .result_box{
+        padding: 7%;
+        width: 95%;
+        left: 2.5%;
+        top: 18vh;
+    }
+
+    .result_box .complete_text{
+        font-size: 160%;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 4vh;
+    }
+
+    .result_box .buttons button{
+        font-size: 110%;
+    }
+}

@@ -1,0 +1,239 @@
+@media screen and (max-width:640px){
+    .album-holder {
+        overflow: hidden;
+        padding-bottom: 0;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 15vh 40vh 10vh 10vh auto;
+        grid-template-areas: 
+        " title title"
+        " cover cover"
+        "info info"
+        "tracklist tracklist"
+        "tracklist tracklist";
+    }
+    .radio-animation{
+        display: none;
+    }
+
+    .btns-tracklist, .ShowTrk {
+        display: block;
+    }
+
+    .cover{
+        grid-area: cover;
+        width: 100%;
+        height: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        min-width: 200px;
+        min-height: 200px;
+        margin: 0 auto;
+    }
+    .album-title {
+        width: 70%;
+        margin: auto;
+        padding: 2vh auto;
+    }
+    .album-title h2 {
+        font-size: 160%;
+    }
+    .album-info {
+        grid-area: info;
+        margin: 0vh auto;
+        width: 70%;
+    }
+    .album-info p{
+        font-size: 90%;
+        text-align: center;
+    }
+
+    .btn_holder .hide-tracklist_btn{
+        opacity: 0;
+        position: relative;
+        top: -16.5vh;
+        font-size: 145%;
+        transition: all 0.2s ease;
+    }
+    .btns-tracklist {
+        padding: 0 5%;
+        display: block;
+        width: 100%;
+        height: 100%;
+        grid-area: tracklist;
+    }
+
+    .btn_holder {
+        width: 80%;
+        margin: auto;
+        height: 10vh;
+        transform: translate(10%, -2.5vh);
+        transition: all 0.3s ease;
+    }
+
+     .btn {
+        display: inline-block;
+        min-width: 70px;
+        min-height: 70px;
+        max-width: 75px;
+        max-height: 75px;
+        border-radius: 100%;
+        padding: 5%;
+        background-color: transparent;
+        border: 2px #222 solid;
+        filter: none;
+        transition: all 0.3s ease;
+    }
+
+    .btn i{
+        width: 100%;
+        text-align: center;
+        padding: 1vh 0;
+        transform: rotate(0deg) scale(3);
+        transition: all 0.5s ease;
+    }
+
+    .ShowTrk{
+        z-index: 3;
+        opacity: 0;
+        cursor: pointer;
+        width: 100%;
+        height: 10vh;
+        position: absolute;
+        transform: translateY(62vh);
+    }
+
+    .btns-tracklist p {
+        cursor: pointer;
+        display: inline-block;
+        height: 10vh;
+        width: 50%;
+        font-size: 130%;
+        font-weight: 700;
+        position: relative;
+        left: 30%;
+        top: -6vh;
+        transition: all 0.2s ease;
+        
+    }
+
+    .ShowTrk:hover ~ .btns-tracklist .show-tracklist_btn{
+        transform: scale(1.05) translate(10%, -2.5vh);
+        transition: all 0.3s ease;
+    }
+
+    .ShowTrk:hover ~ .btns-tracklist .show-tracklist_btn div i{
+        transform: rotate(360deg) scale(3);
+        transition: all 0.4s ease;
+    }
+
+    .ShowTrk:hover ~ .btns-tracklist .show-tracklist_btn div {
+        background-color: rgba(255, 255, 255, 0.65);
+        transition: all 0.3s ease;
+    }
+
+    .ShowTrk:checked ~ .btns-tracklist .show-text {
+       opacity: 0;
+       transition: all 0.2s ease;
+    }
+
+    .ShowTrk:checked ~ .btns-tracklist .hide-text {
+        opacity: 1;
+        transition: all 0.2s ease;
+     }
+
+     .ShowTrk:checked ~ .btns-tracklist .show-tracklist_btn .btn {
+        background-color: #222;
+        transition: all 0.2s ease;
+     }
+
+     .ShowTrk:checked ~ .btns-tracklist .show-tracklist_btn .btn i {
+        transform: rotate(900deg) scale(3);
+        color: rgb(251, 216, 100);
+        transition: all 0.5s ease;
+     }
+
+     .ShowTrk:checked:hover ~ .btns-tracklist .show-tracklist_btn .btn i {
+        color: white;
+        transform: rotate(1260deg) scale(3);
+        transition: all 0.3s ease;
+    }
+
+    .tracklist {
+        margin-top: 10vh;
+        display: none;
+        padding: 10%;
+        grid-area: tracklist;
+    }
+    .ntrack {
+        width: 10%;
+    }
+    .song {
+        width: 60%;
+        padding: 2%;
+    }
+
+    #akindofmagicmenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #lm5menu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #ziggymenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #folkloremenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #sunrisemenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #youngbloodmenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #blackparademenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #electramenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    #btwmenu:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    }
+
+    /* #:checked ~ .tracklist{
+        visibility: visible;
+        display: block;
+    } */
+
+    @keyframes onhold_btn {
+        0%{
+            transform: scale(0.9);
+        }
+        50%{
+            transform: scale(1.1);
+        }
+        100%{
+            transform: scale(0.9);
+        }
+    }
+    
+
+    
+}

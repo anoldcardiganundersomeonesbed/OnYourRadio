@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+       <!-- general styles -->
+   <link rel="stylesheet" href="../css/login_Styles.css">
+   <link rel="stylesheet" href="../css/styles_general.css">
+
+   <link media="(max-width: 640px)" rel="stylesheet" href="../css/login_Styles-small.css">
+   <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/login_Styles-med.css">
+   <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/login_Styles-laptop.css">
+      <link media="(min-width: 1600px)" rel="stylesheet" href="../css/login_Styles.css">
+
+   <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_general-small.css">
+   <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_general-med.css">
+   <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_general-laptop.css">
+   <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_general.css">
+
+    <!-- this page styles -->
+    <link rel="stylesheet" href="../css/styles_playlist.css">
+
+    <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_playlist-small.css">
+    <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_playlist-med.css">
+    <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_playlist-laptop.css">
+    <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_playlist.css">
+
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/d11c29c02b.js" crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="../img/WEBLOGO2.0.png" type="image/png">
+
+    <title>Playlist Semanal</title>
+
+</head>
+<body>
+  <header id="header">
+    <figure id="mainlogo">
+      <img src="../img/logopage.png" alt="logo">
+    </figure>
+    <figure id="logo">
+      <img src="../img/WEBLOGO2.0.png" alt="logo">
+    </figure>
+      <div id="login-page" class="focus">
+        <form action="php" method="post" class="zoom">
+      <div class="container">
+        <figure class="pfp"><img id="avatar" src="../img/avatar.png" alt="user"></figure>
+        <label for="username">Usuario:</label>
+        <input type="text" placeholder="Inserte su nombre de usuario..." name="username" required>
+
+        <label for="pw">Contraseña:</label>
+        <input type="password" placeholder="Escriba su contraseña..." name="pw" required>
+
+        <button class="submit" type="submit">Iniciar sesión</button>
+        <label id="rememberme" for="rememberme">
+          <input type="checkbox" checked="checked" name="rememberme">Recordarme
+        </label>
+        <button type="button" class="exitbtn" onclick="document.getElementById('login-page').style.display='none'"><img class="icon" src="../img/cross.png" alt="exit"></button>
+        <div class="more-login">
+          <button type="button" class="createacc"><a href="createAcc.html">Registrarme</a></button>
+          <span class="pw"><a href="#">Olvidé mi contraseña</a></span>
+        </div>
+        </div>
+        </form>
+      </div>
+      
+  </header>
+
+<input type="checkbox" id="hmgmenu" name="hmgmenu">
+<label for="hmgmenu"><img id="imgmenu" class="hide-icon" src="../img/menu-icon.png" alt="menu">
+</label>
+
+<nav id="menu" class="nav">
+  <ul id="menops">
+    <li id="op-searchbar" class="search-bar nav-hide option hbgop">
+      <img class="icon nav-hide" src="../img/search.png" alt="search-icon">
+      <input type="text" placeholder="Buscar...">
+    </li>
+      <li id="home" class="option hbgop">
+          <a href="../index.html"><img class="hide-icon" src="../img/home-icon.png" alt="home"><h3>Inicio</h3></a>
+      </li>
+      <li id="quiz-link" class="option hbgop">
+          <a href="quizes_list.html"><img class="hide-icon" src="../img/quiz-icons.png" alt="quizzes"><h3>Quizzes</h3></a>
+      </li>
+      <li id="playlistLink" class="option hbgop">
+          <a href="playlist.html"><img class="hide-icon" src="../img/playlist.png" alt="playlist"><h3>Playlist Semanal</h3></a>
+      </li>
+      <li id="libraryLink" class="option hbgop">
+        <a href="allAlbums.html"><img class="hide-icon" src="../img/library.png" alt="library"><h3>Librería</h3></a>
+    </li>
+    <li id="nav-searchbar" class="search-bar option smallhide">
+      <img class="search-icon" class="icon" src="../img/search.png" alt="search-icon">
+      <input type="text" placeholder="Buscar...">
+    </li>
+    
+    </ul>
+</nav>
+<div class="login">
+  <button onclick="document.getElementById('login-page').style.display='block'">
+    <img class="hide-icon white" src="../img/profile-White.png" alt="log-in">
+    <img class="hide-icon black" src="../img/profile.png" alt="log-in">
+    <h3>Iniciar Sesión</h3>
+  </button>
+</div>
+  <main>
+        <section class="song-section" id="all-too-well" onmouseover="alltoowell.play()" onmouseleave="alltoowell.pause(), alltoowell.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('info-alltoowell').style.display='block';
+           document.getElementById('song-details-box').style.display='block'" class="vinyl"><img src="../img/redtv.png" alt="all-too-well"></button>
+            <div id="info-alltoowell" class="text-content zoom">
+                <section class="song-title"> <h3>All Too Well (10 minute version) – Taylor Swift</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="song-name">«All Too Well»</span> —en español: <span>«Todo muy bien»</span> — es una canción interpretada y compuesta por 
+                    la cantante y compositora estadounidense <span class="artist-name">Taylor Swift</span> e incluida en su cuarto álbum de estudio, 
+                    Red de 2012. Swift la compuso con ayuda de Liz Rose y la produjo junto con Nathan Chapman. 
+                    Es una balada country que presenta influencias al folk y el arena rock. La letra de <span class="song-name">«All Too Well»</span> 
+                    presenta recuerdos de una relación enterrada en el pasado y habla sobre el apego a los objetos 
+                    materiales luego de que esta acaba.
+                  </p>
+                  <p>
+                    Swift volvió a grabar dos versiones de <span class="song-name">«All Too Well»</span> para su álbum regrabado de 2021, <span class="albumname">Red (Taylor's Version)</span>.
+                     La primera, <span class="song-name">«All Too Well (Taylor's Version)»</span>, es una regrabación de la pista 
+                     de 2012; el segundo, <span class="song-name">«All Too Well (10 minute version)»</span>, es la versión íntegra de la canción, 
+                     que contiene sus versos y melodías originales antes de que fueran recortadas.
+                  </p>
+                </article>
+                </section>
+            </div>
+          
+        </section>
+
+        <section class="song-section" onmouseover="tby.play()" onmouseleave="tby.pause(), tby.currentTime=0">
+          <button type="button" class="vinyl"
+           onclick="document.getElementById('thinking-bout-you-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+           <img src="../img/channelorange.png" alt="thinkingboutyou"></button>
+            <div id="thinking-bout-you-info" class="text-content zoom">
+                <section class="song-title"> <h3>Thinking Bout You – Frank Ocean</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="song-name">«Thinking Bout You»</span> - en español <span>Pensando en ti</span> – Es una canción del artista americano <span class="artist-name">Frank Ocean</span>, 
+                    presentado como single principal de su álbum debut <span class="albumname">«Channel Orange»</span> en 2012.
+                  </p>
+                  <p>
+                    Líricamente, la canción nos habla de una relación fuera de alcance y la confusión que eso 
+                    produce. La pista también explora los sentimientos de arrepentimiento y angustia acompañado 
+                    de un beat atmosférico, dulce balada R&B que encarna la esencia minimalista del cantante.
+                  </p>
+                </article>
+                </section>
+            </div>
+            
+        </section>
+
+        <section class="song-section" onmouseover="knl.play()" onmouseleave="knl.pause(), knl.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('knl-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/genniehigh.png" alt="knl">
+          </button>
+            <div id="knl-info" class="text-content zoom">
+                <section class="song-title"> <h3>Kyasha na Lip (華奢なリップ) – Genie High (feat Chanmina)</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="artist-name">Genie High (ジェニーハイ)</span>  es ina banda indie progresiva japonesa, uniendo a sus miembros de diferentes
+                    recorridos en la escena del entretenimiento japonés.
+                  </p>
+                  <p>
+                    Desde su debut en 2018 han sacado un total de un EP y dos álbumes, que han gozado de notable éxito en las listas nacionales.
+                     El pasado mes de Septiembre, sacaron su segundo álbum, <span class="albumname">Genie Star (ジェニースター)</span>  en el cual 
+                     encontramos esta maravillosa colaboración con la rapera japonesa <span class="artist-name">CHANMINA</span>.
+                  </p>
+                </article>
+                </section>
+            </div>
+            
+        </section>
+
+        <section class="song-section" onmouseover="cdg.play()" onmouseleave="cdg.pause(), cdg.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('liketheboys-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+           <img src="../img/sawayama.png" alt=""></button>
+            <div id="liketheboys-info" class="text-content zoom">
+                <section class="song-title"> <h3>Comme des Garçons (Like the Boys) – Rina Sawayama</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="song-name">«Comme des Garçons (Like the Boys)»</span> - en español:  <span>Como los Chicos</span> - es una canción 
+                    compuesta y cantada por la cantante británico-japonesa <span class="artist-name">Rina Sawayama</span> el pasado enero, siendo 
+                    el segundo single del álbum debut de la cantante: <span class="albumname">«Sawayama»</span>. La canción juega con la mezcla 
+                    de géneros tales como el disco, dance, funk, house, electro house y synthpop.
+                  </p>
+                  <p>
+                    En cuanto la letra, es una celebración por la confianza en uno mismo, criticando las expectativas 
+                    de la sociedad y cómo la gente, sea cual sea su género, solo se les permite expresar confianza en sí mismo de una manera convencionalmente masculina.
+                  </p>
+                </article>
+                </section>
+            </div>
+            
+        </section>
+
+        <section class="song-section" onmouseover="themermaid.play()" onmouseleave="themermaid.pause(), themermaid.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('themermaid-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/mermaid.png" alt="mermaid"></button>
+            <div id="themermaid-info" class="text-content zoom">
+                <section class="song-title"> <h3>The Mermaid – Polkadot Stingray</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="artist-name"></span>Polkadot Stingray (ポルカドットスティングレイ) es una banda japonesa de rock de <span>Fukoka</span>, Japón
+                    y bajo la firma <span>Universal Stigma</span>. La banda consiste en 4 miembros (vocalista y guitarra, guitarra, bajo y batería).
+                  </p>
+                  <p>
+                    El 4 de Marzo del 2016, <span class="artist-name">Polkadot Stingray</span> sacó su primer éxito a nivel nacional con  <span class="song-name">"Telecaster Stripe" (テレキャスター・ストライプ)</span>
+                     como single digital. Para septiembre del mismo año, el vídeo musical logró alcanzar el millón de likes, éxito al que siguió el EP de duración ampliada
+                     , <span class="albumname">Honenuki EP (骨抜きE.P.)</span>, en noviembre de 2016, EP del que la canción  <span class="song-name">The Mermaid</span> fue single.
+                  </p>
+                </article>
+                </section>
+            </div>
+            
+        </section>
+
+        <section class="song-section" onmouseover="siempreigual.play()" onmouseleave="siempreigual.pause(), siempreigual.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('siempreigual-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/alizzz.png" alt="siempre-igual"></button>
+            <div id="siempreigual-info" class="text-content zoom">
+                <section class="song-title"> <h3>Siempre Igual – Alizzz</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    La figura de <span class="artist-name">Alizzz</span> ha ido expandiéndose los últimos tiempos hasta ser capaz de volar por sí misma. Al margen de sus 
+                    (muy) exitosas producciones para <span class="artist-name">C. Tangana</span>,  <span class="artist-name">Becky G</span>Becky G, <span class="artist-name">Javiera Mena</span>,
+                    <span class="artist-name">Cupido</span> o <span class="artist-name">La Bien Querida</span>. <span class="artist-name">Cristian Quirante</span> ha 
+                    querido ir un paso más allá de su labor tras los mandos y busca un lugar para que sus propias canciones hablen por sí solas.
+                  </p>
+                  <p>
+                    Un álbum lleno de razones para convencernos, como la irónica  <span class="song-name">“Ya no vales”</span> junto a su colega Pucho, 
+                    el homenaje a Antonio Vega en la funk  <span class="song-name">“Siempre Igual”</span>, el synthpop de  <span class="song-name">“Disimulao”</span> y esas guitarras con las que 
+                    se cierra o la sorprendente pieza de dreampop  <span class="song-name">(“Luces de emergencia”)</span> junto a <span class="artist-name"></span>, para ver ese amplio 
+                    abanico de influencias y registros bien entendidos.
+                  </p>
+                  <p>
+                    Estamos ante un disco que su autor define como una mezcla entre
+                    <blockquote>“la huida, el amor efímero, lo instantáneo, la búsqueda infinita, 
+                      lo crudo, roto y todo lo bonito que hay entre medio. Todo lo que me emociona, 
+                      me obsesiona y me hace frágil y vulnerable” pero que va mucho más allá, porque es
+                       un reflejo de cómo la música en nuestro país ha sabido evolucionar hacia un desprejuiciado
+                        coctel de estilos, dejando a un lado a esos “talibanes de la autenticidad” </blockquote>
+                    que tan bien retrataba el ensayo La música no es lo más importante (Javier Becerra). Aunque aquí sí lo sea.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section " onmouseover="blueprint.play()" onmouseleave="blueprint.pause(), blueprint.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('blueprint-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/inlife.png" alt="blueprint"></button>
+            <div id="blueprint-info" class="text-content zoom">
+                <section class="song-title"> <h3>Blueprint (청사진) – Stray Kids</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="artist-name">Stray Kids</span> sorprende con este track que auna una composición de ensueño y esencia juvenil.
+                     En comparación con canciones anteriores cargadas de senidos fieros y oscuros,   <span class="song-name">«Blueprint»</span> contrasta con un color
+                     mucho más claro y brillante musicalmente hablando.
+                  </p>
+                  <p>
+                    <span class="song-name">«Blueprint»</span> contiene elementos del género musical deep house, en sintonía con relajados ritmos EDM
+                     lo que le aporta a la canción su fresco <span>aesthetic</span>.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="iltioy.play()" onmouseleave="iltioy.pause(), iltioy.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('iltioy-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+          <img src="../img/badideas.png" alt="iliketheideaofyou"></button>
+            <div id="iltioy-info" class="text-content zoom">
+                <section class="song-title"> <h3>I like (the idea of) you – Tessa Violet</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="artist-name">Tessa Violet</span> escribió  <span class="song-name">«I like (the idea of) you»</span> como contraparte de su
+                     anterior canción  <span class="song-name">«Bad Ideas»</span>,
+                    contando la misma idea pero desde una perspectiva diferente. 
+                  </p>
+                  <p>
+                    Explicó en <span>MTV</span>:
+                    <blockquote>Me estaba viendo con alguien por aquél entonces al que no le gustaba tanto y, aunque era consciente de ello, no podía evitar
+                         consentirme a mí misma en la diversión de pensar y obsesionarme con él. Recuerdo que era capad de ver de forma lógica que lo nuestro
+                          no iba a ir a ninguna parte, y recuerdo pensar que a lo mejor devería de avergonzarme por todo el tiempo que gastaba en él,
+                           pero todo lo contrario, no me hacía sentir avergonzada para nada. ¿Y qué si no le gusto tanto? Me gusta la idea de lo que podría ser 
+                           y voy a disfrutar de ello.
+                    </blockquote>
+                    <p>
+                    La canción debutó con una actuación en directo antes de ser lanzada oficialmente como single en mayo de 2019.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="helena.play()" onmouseleave="helena.pause(), helena.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('helena-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/mcr.png" alt="helena"></button>
+            <div id="helena-info" class="text-content zoom">
+                <section class="song-title"> <h3>Helena – My Chemical Romance</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="song-name">«Helena»</span> — también conocida como  <span class="song-name">«Helena (so long & goodnight)</span>» — es el tercer sencillo del álbum
+                    <span class="albumname">«Three cheers for sweet revenge»</span>, publicado en 2004, de la banda estadounidense de rock <span class="artist-name">My Chemical Romance</span>.
+                      La canción describe los sentimientos del vocalista <span class="artist-name">Gerard Wa</span>y y su hermano, <span class="artist-name">Mikey Way</span>, por su difunta abuela,
+                       Elena Lee Rush (a quien sus amigos llamaban cariñosamente Helen). <span class="artist-name">Gerard Way</span> pensó en combinar el nombre de 
+                       su abuela con su alias, formando  <span class="song-name">«Helena»</span>, título de la canción.
+                  </p>
+                  <p>
+                    <span class="artist-name">Gerard Way</span> dijo para <span>Channel V</span> que se influyeron por la canción <span>«Aces high»</span> de <span>Iron Maiden</span>; además,
+                     ha señalado que <span class="song-name">«Helena»</span> fue creada usando como modelo al disco <span>Dear you</span> de la banda <span>Jawbreaker</span>, tal 
+                     como hicieron con otras canciones como  <span class="song-name">«Give 'em hell, kid»</span>. Este sencillo es considerado su canción más
+                      popular y <span class="artist-name">Gerard</span> la describió como una representación de la banda en cuanto a imagen y sonido en ese momento,
+                       y muchas veces fue usada para terminar los conciertos.
+                  </p>
+                  <p>
+                    En 2008 fue certificada como disco de oro en los Estados Unidos. 
+                    Esta canción fue utilizada en los créditos de la película <span>La casa de cera</span>.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="moonlightthoughts.play()" onmouseleave="moonlightthoughts.pause(), moonlightthoughts.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('moonlightthoughts-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/sign.png" alt="moonlightthoughts"></button>
+            <div id="moonlightthoughts-info" class="text-content zoom">
+                <section class="song-title"> <h3>Moonlight Thoughts (寄 明月) – SING 女团</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="artist-name">SING女团 </span> lanzó el sencillo  <span class="song-name">"Moonlight Thoughts" (寄 明月)</span>, su primera canción electrónica
+                     de baile al estilo chino. El sencillo ayudó al grupo a ganar popularidad e impulso en China.
+                      En diciembre, el grupo realizó un concierto de Navidad en vivo llamado <span>"Part of Me"</span>.
+                  </p>
+                  <p>
+                    En noviembre, el grupo lanzó su primer álbum internacional <span class="albumname">"SING"</span> en <span>iTunes</span> y <span>Spotify</span>.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="yoinvito.play()" onmouseleave="yoinvito.pause(), yoinvito.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('yoinvito-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/yoinvito.png" alt="yoinvito"></button>
+            <div id="yoinvito-info" class="text-content zoom">
+                <section class="song-title"> <h3>Yo Invito – Amaia</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    La artista navarra, <span class="artist-name">Amaia</span>, acaba de publicar el primer adelanto de su 
+                    siguiente disco, una canción melancólica y emocional que convence por méritos propios.
+                  </p>
+                  <p>
+                    <span class="song-name">«Yo invito»</span> narra una ruptura amorosa que, si bien ha tenido un final trágico, supone una 
+                    liberación para <span class="artist-name">Amaia</span>. En el estribillo, la cantante deja claro que la noche que le espera es para
+                     desahogarse, ya sea gritando, llegando a casa de madrugada o pagando todas las rondas. El tema es un tira y 
+                     afloja entre la tristeza y el alivio, dos sentimientos opuestos que juntos adquieren más lógica que nunca 
+                     dentro del imaginario de <span class="artist-name">Amaia</span>.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="ltl.play()" onmouseleave="ltl.pause(), ltl.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('lovertolover-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/ceremonials.png" alt="lovertolover"></button>
+            <div id="lovertolover-info" class="text-content zoom">
+                <section class="song-title"> <h3>Lover to Lover – Florence and the Machine</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="song-name">«Lover to Lover»</span> es una canción de la banda británica de indie rock <span class="artist-name">Florence and the Machine</span>
+                     incluida en su segundo álbum de estudio, <span class="albumname">Ceremonials</span>. La canción fue escrita por <span class="artist-name">Florence Welch</span> y
+                     <span class="artist-name">Paul Epworth</span>. 
+                  </p>
+                  <p>
+                    Fue lanzada como quinto y último sencillo del álbum el 30 de noviembre de 2012 siendo una descarga digital en <span>iTunes</span>.
+                     Una versión de la canción interpretada en el <span>Ceremonials Tour</span> es una versión editada de la original con producción 
+                     adicional de <span class="artist-name">Chris Hayden</span>.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="iwbys.play()" onmouseleave="iwbys.pause(), iwbys.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('iwbys-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/maneskintdl.png" alt="iwannabeyourslave"></button>
+            <div id="iwbys-info" class="text-content zoom">
+                <section class="song-title"> <h3>I Wanna Be Your Slave – Måneskin</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="song-name">«I Wanna Be Your Slave»</span> — en español: <span>«Quiero ser tu esclavo»</span> — es una canción de la banda de rock
+                     italiana <span class="artist-name">Måneskin</span>, de su segundo álbum de estudio, <span class="albumname">"Teatro d'ira: Vol. I"</span> publicado el 19 de marzo de 
+                     2021 por <span>Sony</span>. Antes de su lanzamiento como sencillo, la canción logró alcanzar las diez primeras 
+                     posiciones en las listas de Europa, incluido el número uno en Finlandia y Eslovaquia, y se volvió 
+                     viral en las listas de <span>Spotify</span>. Es la segunda canción de la banda en llegar al top 20 del <span>UK Singles Chart</span> 
+                     y la primera en llegar al top 10 y top 5, y la segunda en llegar al top 10 del <span>Billboard Global 200</span>.
+                  </p>
+                  <p>
+                    El 16 de julio de 2021, la canción fue liberada oficialmente a las estaciones de radio italianas como 
+                    el tercer sencillo del <span class="albumname">"Teatro d'ira: Vol. I"</span>. Fue certificado platino en Italia, Finlandia y Polonia, 
+                    séxtuple platino en Rusia y oro en Austria, Grecia, Irlanda, Noruega, Polonia, Suecia y Turquía.
+                  </p>
+                  <p>
+                    La canción habla sobre la dualidad en las relaciones amorosas, la "obsesión y cómo están dispuestos a 
+                    esclavizarse a sí mismos si eso es lo que se necesita para ganarse a esa persona especial". Según el 
+                    letrista <span class="artist-name">Damiano David</span>, la canción 
+                    <blockquote>"describe crudamente todas las facetas de la sexualidad y cómo 
+                        pueden influir en la vida cotidiana. Hemos insertado algunos contrastes: 'Soy el diablo, 
+                        soy abogado, soy un asesino, soy una chica rubia', queremos transmitir la idea de que no 
+                        necesitamos tener una sola identidad., todo el mundo puede tener muchas facetas".</blockquote>
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="sitw.play()" onmouseleave="sitw.pause(), sitw.currentTime=0">
+            <button type="button" class="vinyl"
+            onclick="document.getElementById('sitw-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+              <img src="../img/somethinginthewater.png" alt="somethinginthewater"></button>
+            <div id="sitw-info" class="text-content zoom">
+                <section class="song-title"> <h3>Something In The Water – Boys World</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    Una canción sobre la felicidad que encarna el verano,  <span class="song-name">«Something In The Water»</span>, en
+                     español – <span>Algo en el agua</span> – te hará sentir al instante como el protagonista de una película adolescente.
+                  </p>
+                  <p>
+                    Es el último single del grupo del momento – al menos de acuerdo con <span>«Tik-Tok»</span> - <span class="artist-name">Boys World,</span> 
+                    quienes se apoderaron de la media <span>on-line</span> con su éxito  <span class="song-name">«Wingman»</span> a principios del año pasado. 
+                    Ahora, han vuelto a hacer lo mismo con su última canción clara en cuanto a temática: muy a tiro 
+                    hecho, pop bailable que te obliga a bailar donde quiera que estés.
+                  </p>
+                </article>
+              </div>
+            </div>
+            
+        </section>
+
+        <section class="song-section "onmouseover="bde.play()" onmouseleave="bde.pause(), bde.currentTime=0">
+          <button type="button" class="vinyl"
+          onclick="document.getElementById('bde-info').style.display='block';
+           document.getElementById('song-details-box').style.display='block'">
+            <img src="../img/qveenep5.png" alt="bde"></button>
+            <div id="bde-info" class="text-content zoom">
+                <section class="song-title"> <h3>BDE – Qveen Hervy</h3> </section>
+                <section class="scroll-down"><button ><i class="fa-solid fa-caret-down"></i></button></section>
+                <section class="more-info">
+                  <article class="song-text">
+                  <p>
+                    <span class="song-name">«BDE»</span> es el single del EP de la rapera, cantante y compositora estadounidense 
+                    <span class="artist-name">Amy Renee Noonan Heidemann</span>, más conocida por su nombre artístico <span class="artist-name">Qveen Herby</span>.
+                    Heidemann empezó su carrera musical como miembro del dúo pop <span class="artist-name">Karmin</span>, con el ahora-esposo <span class="artist-name">Nick Noonan</span>,
+                     lanzando versiones de canciones en <span>YouTube</span>.
+                  </p>
+                  <p>
+                    En 2017, todas las redes sociales de <span class="artist-name">Karmin</span> fueron renombradas a <span class="artist-name">Qveen Herby</span> y una pequeña
+                     vista previa que decía <span>"Karmin Is Dead, Long Live the Qveen"</span>. <span class="artist-name">Noonan</span> formalmente 
+                     anunció su carrera en solitario, así como su primer juego extendido, <span class="albumname">EP 1</span>.
+                  </p>
+                  <p>
+                    El video musical de su primer single, <span>"Busta Rhymes"</span> fue lanzado el 1 de junio de 2017,
+                     seguido del lanzamiento del <span class="albumname">EP 1</span> un día después. El EP fue un gran éxito, 
+                     alcanzando el puesto 37 en la lista de álbumes Independientes de <span>Billboard</span> 
+                     de los Estados Unidos. Y el número 13 en la lista de álbumes de <span>Heatseekers</span> de EE. UU.
+                  </p>
+                  <p>
+                    Tras el lanzamiento de <span class="albumname">EP 1</span>, <span class="artist-name">Herby</span> empezó a lanzar una serie de EPs, con <span class="albumname">EP 2</span> 
+                    lanzado en 2017, <span class="albumname">EP 3</span> y <span class="albumname">EP 4</span> en 2018, 
+                    <span class="albumname">EP 5</span>,  <span class="albumname">EP 6</span>, <span class="albumname">EP 7</span>,
+                     y <span class="albumname">The Vignettes</span> en 2019. Y <span class="albumname">Tiny Piano</span>, 
+                     <span class="albumname">EP 8</span> y <span class="albumname">EP 9</span> en 2020. Tres del EPs se ubicaron en las listas de <span>Billboard</span> de los Estados Unidos.
+                     Herby lanzó su álbum debut <span class="albumname">A Woman</span> el 21 de mayo de 2021.
+                  </p>
+                </article>
+               
+                
+              </div>          
+        </section>
+
+        <section id="song-details-box" class="details focus">
+          <section id="info-box" class="container zoom">
+            <button type="button" class="close-info" onClick="window.location.reload();",
+            onclick="document.getElementById('song-details-box').style.display='none';
+            document.getElementById('info-alltoowell').style.display='none';
+            document.getElementById('bde-info').style.display='none';
+            document.getElementById('knl-info').style.display='none';
+            document.getElementById('sitw-info').style.display='none';
+            document.getElementById('iwbys-info').style.display='none';
+            document.getElementById('helena-info').style.display='none';
+            document.getElementById('iltioy-info').style.display='none';
+            document.getElementById('yoinvito-info').style.display='none';
+            document.getElementById('blueprint-info').style.display='none';
+            document.getElementById('themermaid-info').style.display='none';
+            document.getElementById('liketheboys-info').style.display='none';
+            document.getElementById('lovertolover-info').style.display='none';
+            document.getElementById('siempreigual-info').style.display='none';
+            document.getElementById('thinking-bout-you-info').style.display='none';
+            document.getElementById('moonlightthoughts-info').style.display='none';
+            "><img class="icon" src="../img/cross.png" alt="exit"></button>
+            <section class="recomendations"></section>
+          </section>
+        </div>
+
+    </main>
+
+    <footer>
+      <div id="social-media">
+        <h4>Follow us on our social media!</h4>
+        <ul class="social-media-list">
+          <li class="twt"><i class="fa-brands fa-twitter"></i></li>
+          <li class="ig"><i class="fa-brands fa-instagram"></i></li>
+          <li class="fb"><i class="fa-brands fa-facebook"></i></li>
+          <li class="sp"><i class="fa-brands fa-spotify"></i></li>
+        </ul>
+      </div>
+      <div id="phrase"><h2>Always on Your Radio</h2></div>
+      <div id="copyright">All rights reserved</div>
+    </footer>
+
+    <div id="songs">
+      <audio id="alltoowell">
+        <source src="../audio/alltoowell.mp3"/>
+      </audio>
+      <audio id="tby">
+        <source src="../audio/thinkingboutyou.mp3"/>
+      </audio>
+      <audio id="knl">
+        <source src="../audio/geniehigh.mp3"/>
+      </audio>
+      <audio id="cdg">
+        <source src="../audio/liketheboys.mp3"/>
+      </audio>
+      <audio id="themermaid">
+        <source src="../audio/the-mermaid.mp3"/>
+      </audio>
+      <audio id="siempreigual">
+        <source src="../audio/siempreigual.mp3"/>
+      </audio>
+      <audio id="blueprint">
+        <source src="../audio/blueprint.mp3"/>
+      </audio>
+      <audio id="iltioy">
+        <source src="../audio/iliketheideaofyou.mp3"/>
+      </audio>
+      <audio id="helena">
+        <source src="../audio/helena.mp3"/>
+      </audio>
+      <audio id="moonlightthoughts">
+        <source src="../audio/moonlightthoughts.mp3"/>
+      </audio>
+      <audio id="yoinvito">
+        <source src="../audio/yoinvito.mp3"/>
+      </audio>
+      <audio id="ltl">
+        <source src="../audio/lovertolover.mp3"/>
+      </audio>
+      <audio id="iwbys">
+        <source src="../audio/iwannabeyourslave.mp3"/>
+      </audio>
+      <audio id="sitw">
+        <source src="../audio/somethinginthawater.mp3"/>
+      </audio>
+      <audio id="bde">
+        <source src="../audio/bde.mp3"/>
+      </audio>
+    </div>
+
+    <script src="../script/playlist-script.js"></script>
+
+</body>
+</html>

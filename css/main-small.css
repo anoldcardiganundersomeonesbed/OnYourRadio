@@ -1,0 +1,37 @@
+@media screen and (max-width:640px){
+
+    main{
+        width: 100%;
+    }
+
+    #slider {
+        height: 80vh;
+    }
+
+    .slider>a{
+        width: 19.85%;
+        height: 80vh;
+    }
+
+    .img-holder {
+        width: 101%;
+        height: 80vh;
+        background-position: center;
+    }
+
+    .filter {
+        width: 500%;
+        height: 85vh;
+    }
+
+    .slider-link h3 {
+        font-size: 170%;
+        transform: translate(5%, 69vh);
+    }
+
+    .slider:hover a > h3 {
+        transform: scale(1.15) translate(10%, 59vh);
+
+    }
+
+}

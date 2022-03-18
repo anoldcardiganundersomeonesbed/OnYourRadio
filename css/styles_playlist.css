@@ -1,0 +1,152 @@
+
+main{
+    background-color: rgb(255, 255, 255);
+    padding: 3vh 7%;
+}
+main > h2 {
+    text-align: center;
+    font-size: 250%;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+.song-section{
+    border-radius: 25px;
+    min-height: 48vh;
+    width: 100%;
+    padding: 5%;
+    margin: 3vh auto;
+    background-color: rgb(251, 216, 100);
+}
+
+.vinyl, .vinyl>button{
+    padding: 0;
+    pointer-events: none;
+    color: transparent;
+    background-color: transparent;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+}
+
+.vinyl  img {
+    height: 100%;
+    width: 100%;
+    filter: drop-shadow(5px 5px 5px #222);
+}
+
+.song-section > .vinyl img{
+    transform: rotate(0deg);
+    transition: transform 2s;
+    transition-timing-function: ease;
+}
+
+    .song-section:hover > .vinyl img{
+        transform: rotate(760deg);
+        transition: transform 21s;
+        transition-timing-function: ease;
+    }
+
+    .song-section:hover::after > .vinyl img{
+    transform: rotate(0deg);
+    transition: transform 5s;
+    transition-timing-function: ease-out;
+    }
+
+.text-content {
+    display: initial;
+    float: right;
+    text-align: justify;
+    width: 63%;
+}
+.song-title {
+    text-align: center;
+    width: 100%;
+    font-size: 220%;
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.more-info{
+    width: 100%;
+    padding: 0%;
+    overflow-y: hidden;
+    height: 18vh;
+    position: relative;
+    top: -5vh;
+}
+
+.scroll-down:hover ~ .more-info .song-text{
+    transform: translateY(-65%);
+    transition: all 20s ease-in-out;
+}
+    
+.song-text{
+    transform: translateY(0vh);
+    transition: all 2s ease;
+}
+
+.song-text p {
+    margin: 0% auto;
+}
+
+blockquote {
+    font-style: italic;
+    padding-left: 5%;
+    padding-bottom: 2vh;
+}
+
+span {
+    font-style: italic;
+}
+
+.artist-name{
+    font-style: normal;
+    text-decoration: underline;
+}
+
+.song-name{
+    font-weight: 900;
+}
+
+.albumname{
+    font-style: normal;
+    font-weight: 900;
+}
+
+.scroll-down {
+    position: relative;
+    top: 17.3vh;
+    width: 100%;
+    height: 4vh;
+    border-top: #222 solid 1px;
+}
+.scroll-down button{
+    background-color: transparent;
+    filter: none;
+    display: block;
+    width: 95%;
+    margin: auto;
+    transition: all 0.5s ease;
+}
+
+.scroll-down button i{
+    transform: scale(1.2);
+    color: black;
+    transition: all 0.5s ease;
+}
+
+
+.scroll-down:hover button{
+    transform: scale(1.4);
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.794));
+    transition: all 0.5s ease;
+}
+
+.scroll-down:hover button{
+    color: black;
+    transition: all 0.5s ease;
+}
+
+
+
+

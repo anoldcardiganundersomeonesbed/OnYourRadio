@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+       <!-- general styles -->
+       <link rel="stylesheet" href="../css/login_Styles.css">
+       <link rel="stylesheet" href="../css/styles_general.css">
+    
+       <link media="(max-width: 640px)" rel="stylesheet" href="../css/login_Styles-small.css">
+       <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/login_Styles-med.css">
+       <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/login_Styles-laptop.css">
+      <link media="(min-width: 1600px)" rel="stylesheet" href="../css/login_Styles.css">
+    
+       <link media="(max-width: 640px)" rel="stylesheet" href="../css/styles_general-small.css">
+   <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/styles_general-med.css">
+   <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/styles_general-laptop.css">
+   <link media="(min-width: 1600px)" rel="stylesheet" href="../css/styles_general.css">
+
+    <!-- this page styles -->
+    <link rel="stylesheet" href="../css/createacc.css">
+
+    <link media="(max-width: 640px)" rel="stylesheet" href="../css/createacc-small.css">
+    <link media="(min-width: 640px) and (max-width: 1000px)" rel="stylesheet" href="../css/createacc-med.css">
+    <link media="(min-width: 1000px) and (max-width: 1600px)" rel="stylesheet" href="../css/createacc-laptop.css">
+    <link media="(min-width: 1600px)" rel="stylesheet" href="../css/createacc.css">
+
+    <!-- icons  -->
+    <script src="https://kit.fontawesome.com/d11c29c02b.js" crossorigin="anonymous"></script>
+    
+    <link rel="shortcut icon" href="../img/png-transparent-disc-audio-vinyl-record-sound-turntable-music-vintage.png" type="image/png">
+
+    <title>Crear cuenta</title>
+</head>
+<body>
+  <header id="header">
+    <figure id="mainlogo">
+      <img src="../img/logopage.png" alt="logo">
+    </figure>
+    <figure id="logo">
+      <img src="../img/WEBLOGO2.0.png" alt="logo">
+    </figure>
+      <div id="login-page" class="focus">
+        <form action="php" method="post" class="zoom">
+      <div class="container">
+        <figure class="pfp"><img id="avatar" src="../img/avatar.png" alt="user"></figure>
+        <label for="username">Usuario:</label>
+        <input type="text" placeholder="Inserte su nombre de usuario..." name="username" required>
+
+        <label for="pw">Contraseña:</label>
+        <input type="password" placeholder="Escriba su contraseña..." name="pw" required>
+
+        <button class="submit" type="submit">Iniciar sesión</button>
+        <label id="rememberme" for="rememberme">
+          <input type="checkbox" checked="checked" name="rememberme">Recordarme
+        </label>
+        <button type="button" class="exitbtn" onclick="document.getElementById('login-page').style.display='none'"><img class="icon" src="../img/cross.png" alt="exit"></button>
+        <div class="more-login">
+          <button type="button" class="createacc"><a href="createAcc.html">Registrarme</a></button>
+          <span class="pw"><a href="#">Olvidé mi contraseña</a></span>
+        </div>
+        </div>
+        </form>
+      </div>
+      
+  </header>
+
+<input type="checkbox" id="hmgmenu" name="hmgmenu">
+<label for="hmgmenu"><img id="imgmenu" class="hide-icon" src="../img/menu-icon.png" alt="menu">
+</label>
+
+<nav id="menu" class="nav">
+  <ul id="menops">
+    <li id="op-searchbar" class="search-bar nav-hide option hbgop">
+      <img class="icon nav-hide" src="../img/search.png" alt="search-icon">
+      <input type="text" placeholder="Buscar...">
+    </li>
+      <li id="home" class="option hbgop">
+          <a href="../index.html"><img class="hide-icon" src="../img/home-icon.png" alt="home"><h3>Inicio</h3></a>
+      </li>
+      <li id="quiz-link" class="option hbgop">
+          <a href="quizes_list.html"><img class="hide-icon" src="../img/quiz-icons.png" alt="quizzes"><h3>Quizzes</h3></a>
+      </li>
+      <li id="playlistLink" class="option hbgop">
+          <a href="playlist.html"><img class="hide-icon" src="../img/playlist.png" alt="playlist"><h3>Playlist Semanal</h3></a>
+      </li>
+      <li id="libraryLink" class="option hbgop">
+        <a href="allAlbums.html"><img class="hide-icon" src="../img/library.png" alt="library"><h3>Librería</h3></a>
+    </li>
+    <li id="nav-searchbar" class="search-bar option smallhide">
+      <img class="search-icon" class="icon" src="../img/search.png" alt="search-icon">
+      <input type="text" placeholder="Buscar...">
+    </li>
+    
+    </ul>
+</nav>
+<div class="login">
+  <button onclick="document.getElementById('login-page').style.display='block'">
+    <img class="hide-icon white" src="../img/profile-White.png" alt="log-in">
+    <img class="hide-icon black" src="../img/profile.png" alt="log-in">
+    <h3>Iniciar Sesión</h3>
+  </button>
+</div>
+    <main>
+      <div class="form-page">
+        <div class="form-header">
+          <figure id="formlogo">
+            <img src="../img/logopage.png" alt="OnYourRadio">
+          </figure>
+          <h2> Crear nueva cuenta </h2>
+        </div>
+
+        <form id="createAcc" action="php" method="post">
+         <div class="nameholder">
+          <label for="name">Nombre:</label>
+          <input type="text" placeholder="Nombre" name="name" required>
+         </div>
+          <div class="stnameholder"><label for="stname">Apellidos:</label>
+            <input type="text" placeholder="Apellidos" name="stname" required></div>
+    
+          <label for="username">Nombre de usuario:</label>
+          <input type="text" placeholder="@" name="username" required>
+    
+          <label for="email">Correo electrónico:</label>
+          <input type="email" placeholder="Correo electrónico" name="email" required>
+    
+          <label for="pw">Contraseña:</label>
+          <input type="password" placeholder="Crea una contraseña de mínimo 8 caracteres" name="pw" required>
+    
+          <label for="pw">Vuelve a introducir tu contraseña:</label>
+          <input type="password" placeholder="Vuelve a introducir tu contraseña" name="pw" required>
+    
+          <div class="formcheck">
+            <input type="checkbox" class="checkbox" name="conditions" id="conditions">
+          <label for="conditions" class="singupcheck"> He leído y acepto las condiciones de uso </label>
+          </div>
+
+          <div class="formcheck">
+            <input type="checkbox" class="checkbox" name="updates" id="updates">
+          <label for="updates" class="singupcheck"> Deseo recibir notificaciones y noticias </label>
+          </div>
+
+        </form>
+        <figure class="form-image">
+          <img src="../img/registre (2).png" alt="figure">
+          <p class="figure-text">Join our comunity</p>
+        </figure>
+        <button class="singup" type="submit">Registrarme</button>
+        <footer class="formfoot">
+          <ul>
+            <li class="moreform"><a href="#">Ayuda</a></li>
+            <li class="moreform"><a href="#">Privacidad</a></li>
+            <li class="moreform"><a href="#">Términos</a></li>
+          </ul>
+        </footer>
+    </div>
+    </main>
+    
+    <footer>
+      <div id="social-media">
+        <h4>Follow us on our social media!</h4>
+        <ul class="social-media-list">
+          <li class="twt"><i class="fa-brands fa-twitter"></i></li>
+          <li class="ig"><i class="fa-brands fa-instagram"></i></li>
+          <li class="fb"><i class="fa-brands fa-facebook"></i></li>
+          <li class="sp"><i class="fa-brands fa-spotify"></i></li>
+        </ul>
+      </div>
+      <div id="phrase"><h2>Always on Your Radio</h2></div>
+      <div id="copyright">All rights reserved</div>
+    </footer>
+</body>
+</html>

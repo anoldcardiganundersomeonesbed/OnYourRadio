@@ -1,0 +1,66 @@
+@media screen and (max-width: 1000px) and (min-width: 640px){
+    
+    .song-section{
+        margin: 2% auto;
+        height: 50vh;
+    }
+
+    .vinyl, .vinyl>button{
+        padding: 0;
+        position: relative;
+        left: 2%;
+        min-width: 90px;
+        min-height: 90px;
+        max-width: 100px;
+        max-height: 100px
+    }
+    .song-section > .vinyl img{
+        transform: rotate(0deg);
+        transition: transform 2s;
+        transition-timing-function: ease;
+    }
+    
+        .song-section:hover > .vinyl img{
+            transform: rotate(760deg);
+            transition: transform 21s;
+            transition-timing-function: ease;
+        }
+    
+        .song-section:hover::after > .vinyl img{
+        transform: rotate(0deg);
+        transition: transform 5s;
+        transition-timing-function: ease-out;
+        }
+    }
+    div.text-content {
+        position: absolute;
+        left: 10%;
+        width: 75%;
+        height: 48vh;
+        max-height: 48vh;
+    }
+
+    .text-content {
+        grid-area: text;
+    }
+
+    .song-title {
+        width: 100%;
+        padding: 2%;
+        height: 19vh;
+    }
+
+    .song-section h3 {
+        font-size: 80%;
+        float: right;
+        width: 70%;
+        text-align: right;
+    }
+    .more-info{
+        width: 100%;
+        padding:0 5%;
+        max-height: 19vh;
+        overflow-y: hidden;
+        
+    }
+

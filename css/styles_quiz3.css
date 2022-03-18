@@ -1,0 +1,25 @@
+
+section .option_list .option.selected{
+    background: #fff9f1;
+    border: 1px solid #f5d9c6;
+}
+
+.result_box .complete_text{
+    text-align: center;
+}
+.result_box .complete_img img{
+    margin: 2vh auto;
+    width: 100%;
+    height: 50vh;
+}
+.result_box .score_text{
+    text-align: center;
+    width: 100%;
+}
+.result_box .icon{
+    text-align: center;
+    width: 100%;
+}
+
+
+

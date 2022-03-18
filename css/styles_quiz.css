@@ -1,0 +1,32 @@
+
+section .que_text{
+    font-style: italic;
+    font-size: 160%;
+}
+
+section .option_list .option{
+    width: 95%;
+    font-size: 130%;
+    font-weight: 600;
+}
+
+section .explanation {
+    display: none;
+    opacity: 0;
+    transform: scale(0.5);
+    width: 95%;
+    padding: 3vh 4%;
+    margin: 3vh 0;
+    text-align: center;
+    font-size: 120%;
+    margin-bottom: 0;
+    border:silver solid 2px;
+    background-color: #a8a8a823;
+    transition: all 0.3s ease;
+}
+
+section .explanation.showexp{
+    display: block;
+    opacity: 1;
+    transform: scale(1);
+}

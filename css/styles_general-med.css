@@ -1,0 +1,186 @@
+@media screen and (max-width: 1600px) and (min-width: 640px){
+    .hide-icon {
+        display: block;
+        width: 100%;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    .hide-icon ~ h3{
+        display: none;
+    }
+
+    .nav{
+        width: 70%;
+    }
+
+    .option {
+        height: 100%;
+        width: 10%;
+        margin-right: 3%;
+    }
+
+    .option > a{
+        position: relative;
+        top: 2vh;
+        margin: 0;
+        height: 100%;
+    }
+
+    .option a img{
+        position: relative;
+        top: -2vh;
+        transform: scale(0.7); 
+        display: block;
+        opacity: 85%;
+    }
+
+    .option > a:hover img {
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.842);
+        transform: scale(0.8);
+        border-radius: 100%;
+        transition: all ease 0.3s;
+    }
+
+    .option > a:hover {
+        background-color: transparent;
+    }
+    
+    .option > a:hover img ::after{
+        background-color: transparent;
+        transition: all ease 0.3s;
+    }
+
+    .nav-hide{
+        display: none;
+    }
+    #hmgmenu{
+        display: none;
+    }
+    #imgmenu{
+        display: none;
+    }
+
+    .login {
+        top: 2vh;
+        right: 1%;
+        width: 12%;
+    }
+
+    .login button {
+        width: 100%;
+        padding: 5%;
+        max-width: 75px;
+    }
+
+    .login button:hover{
+        transform: scale(0.7) translateY(-2vh);
+
+    }
+
+    .login button img {
+        padding: 5%;
+        transition: all 0.3s ease-out;
+    }
+
+    .black {
+        opacity: 0;
+        position: absolute;
+        top: 0%;
+        left: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    .login button:hover .black{
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+    .login button:hover .white{
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    .login button:hover .black::after {
+        opacity: 0;
+        transition: all 0.3s ease-out;
+    }
+
+    .login button:hover .white ::after {
+        opacity: 1;
+        transition: all 0.3s ease-out;
+    }
+
+    .search-bar {
+        display: inline-block;
+        position: relative;
+        width: 20%;
+        top: -1.5vh;
+    }
+
+
+    .search-bar input {
+        border-radius: 100px;
+        width: 70%;
+        padding: 5%;
+        font-size: 90%;
+        max-width: 100px;
+    }
+
+    #nav-searchbar img {
+        width: 10px;
+        height: 10px;
+        max-width: 10px;
+        margin: auto;
+        margin-right: 7%;
+    }
+
+    #mainlogo {
+        width: 18%;
+    }
+
+    #social-media li{
+        padding: 2vh;
+        overflow: hidden;
+    }
+    
+    li i {
+        transform: scale(1.7);
+
+    }
+    .ig i{
+        transform: scale(2);
+
+    }
+
+    #social-media li:hover{
+        transform: scale(1.15);
+    }
+
+    .twt:hover i{
+        transform: scale(2);
+    }
+    
+    
+    .ig:hover i{
+        transform: scale(2.5);
+    }
+    
+    .fb:hover i{
+        transform: scale(2.3);
+    }
+    
+    .sp:hover i{
+        transform: scale(2.3);
+    }
+
+    #phrase h2 {
+        font-size: 180%;
+        font-weight: 800;
+    }
+
+    
+
+}

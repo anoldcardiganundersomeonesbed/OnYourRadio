@@ -1,0 +1,15 @@
+@media screen and (max-width: 1000px) and (min-width: 640px){
+    .focus .container {
+        background-color: #fefefe;
+        width: 70%;
+    }
+
+    .exitbtn {
+        right: 17%;
+        top: 3.5%;
+    }
+
+    .exitbtn img{
+        transform: scale(0.8);
+    }
+}
