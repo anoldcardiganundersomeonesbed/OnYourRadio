@@ -24,7 +24,7 @@
 
     .option > a{
         position: relative;
-        top: 2vh;
+        top: 0vh;
         margin: 0;
         height: 100%;
     }
@@ -68,17 +68,20 @@
         top: 2vh;
         right: 1%;
         width: 12%;
+        transform: scale(0.8) translateY(-2vh);
+        transition: all 0.3s ease-out;
     }
 
     .login button {
         width: 100%;
         padding: 5%;
         max-width: 75px;
+        transition: all 0.3s ease-out;
     }
 
     .login button:hover{
-        transform: scale(0.7) translateY(-2vh);
-
+        transform: scale(0.95) translateY(1vh);
+        transition: all 0.3s ease-out;
     }
 
     .login button img {
@@ -116,8 +119,9 @@
     .search-bar {
         display: inline-block;
         position: relative;
-        width: 20%;
-        top: -1.5vh;
+        width: 25%;
+        top: -7vh;
+        max-width: 220px;
     }
 
 
@@ -126,15 +130,14 @@
         width: 70%;
         padding: 5%;
         font-size: 90%;
-        max-width: 100px;
+        max-width: 95px;
     }
 
     #nav-searchbar img {
-        width: 10px;
-        height: 10px;
-        max-width: 10px;
+        width: 9px;
+        height: 9px;
         margin: auto;
-        margin-right: 7%;
+        margin-right: 5%;
     }
 
     #mainlogo {
