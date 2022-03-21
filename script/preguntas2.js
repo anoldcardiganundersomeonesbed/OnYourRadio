@@ -1,7 +1,7 @@
 let questions = [ 
     {
       numb: "Bohemian Rhapsody, Queen",
-      question: "Just killed a man, put a gun against his head ________ now he's dead",
+      question: "Mama, just killed a man, put a gun against his head ________ now he's dead",
       answer: "pull my trigger",
         options: [
           "might be a killer 'cause",
@@ -89,7 +89,7 @@ let questions = [
     },
     {
         numb: "Highway to Hell, AC/DC",
-        question: "Hey satan ________ playin' in a rockin' band",
+        question: "Hey Satan ________ playin' in a rockin' band",
         answer: "payin' my dues",
             options: [
             "I'm on the promised land",
@@ -278,7 +278,7 @@ let questions = [
     },
     {
         numb: "Carolina, M-Clan",
-        question: "La reina de las medicinas ______ vinagre para las heridas, dulce azúcal al final",
+        question: "La reina de las medicinas ______ vinagre para las heridas, dulce azúcar al final",
         answer: "que no se venden en farmacia legal",
             options: [
             "que no se venden en farmacia legal",
@@ -399,7 +399,7 @@ let questions = [
     //         ],
     // },
     {
-        numb: "19 Días y 500 Noches",
+        numb: "19 Días y 500 Noches - Joaquín Sabina",
         question: "Y regresé a la maldición __________ a la perdición de los bares de copas",
         answer: "del cajón sin su ropa",
             options: [
